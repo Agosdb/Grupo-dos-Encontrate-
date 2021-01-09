@@ -6,3 +6,9 @@ La página contará con un menú desplegable con las distintas opciones que brin
 
 ### Estado del proyecto
 En proceso de armado 
+
+#### Páginas de referencia 
+https://www.decoracion-marinera.es/brujulas_c54970/
+https://www.gpsmundo.com/
+https://www.garmin.com.ar/
+https://www.twonav.com/es/gps/aventura-2
