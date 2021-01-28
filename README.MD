@@ -21,7 +21,7 @@ se definio slogan del mismo;
 Herramientas:
 
 Trello = https://trello.com/b/jg4734re/encontrate
-Github
+Github = https://github.com/Agosdb/Grupo-dos-Encontrate-/projects/1
 
 Pendiente:
 
