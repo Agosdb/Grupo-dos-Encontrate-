@@ -1,0 +1,35 @@
+h2{
+    margin-top: 20px;
+    font-weight: 900;
+    font-size: 24px;
+    font-family: lato, sans-serif;
+    margin: 0%;
+    margin-bottom: 20px;
+}
+.empty-case {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    padding: 100px 40px;
+}
+::after, ::before{
+    box-sizing: border-box;
+}
+body{
+    font-family: lato,sans-serif;
+    line-height:1.2;
+    color: #242322;
+}
+body .checkout-cart-index .page .empty-case i.fa.fa-shopping-cart{
+    color: #e4ebeb;
+}
+.empty-case i{
+    font-size:140px;
+    margin-bottom: 20px;
+}
+.fa{
+    display: inline-block;
+    font: normal normal normal 14px/1 fontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
