@@ -1,3 +1,16 @@
+/*agregado*/
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+/*agregado*/
+header {
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
 body{
     font-family: Lato,sans-serif;
     line-height: 1.2;
