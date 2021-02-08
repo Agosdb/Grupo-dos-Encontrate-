@@ -1,29 +1,23 @@
 const express =require("express");
 
 const app= express();   
-
-const path =require("path");
-
-const publicPath=path.resolve("public");
-
-app.use(express.static(publicPath));
-
+app.use(express.static("public"));
 app.listen(3030, ()=> {
     console.log("Servidor prueba 3030")
 });
 
 app.get("/", (req, res) => {
-    res.sendFile(path.resolve("./views/index.html"));
+    res.sendFile(__dirname +"./views/index.html")
 });
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve("./views/login.html"))
+app.get("/login", (req, res) => {
+    res.sendFile(__dirname +"./views/login.html")
 });
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve("./views/productCar.html"))
+app.get("/productCar", (req, res) => {
+    res.sendFile(__dirname + "./views/productCar.html")
 });
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve("./views/productDetail.html"))
-});
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve("./views/register.html"))
+app.get("/productDetail", (req, res) => {
+    res.sendFile(__dirname +"./views/productDetail.html")
+})
+app.get("/register", (req, res) => {
+    res.sendFile(__dirname +"./views/register.html")
 });
