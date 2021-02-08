@@ -10,7 +10,9 @@ header {
     padding: 0px;    
     box-sizing: border-box;
 }
-
+/*.menu{
+    display: inline;
+}*/
 body{
     font-family: Lato,sans-serif;
     line-height: 1.2;
