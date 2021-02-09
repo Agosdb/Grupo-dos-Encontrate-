@@ -1,0 +1,88 @@
+img {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+::after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a:hover {
+    color: #009c96;
+}
+li {
+    text-align: -webkit-match-parent;
+}
+body {
+    font-family: Lato,sans-serif;
+    line-height: 1.2;
+    color: #242322;
+    min-width: 360px;
+    background-color: #fff;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.disp-baner-content-device-new .small-type, .disp-baner-gps .small-type, .disp-baner-software .small-type {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #fa6855;
+}
+.disp-baner-content-device-new .small-type, .disp-baner-gps .small-type {
+        font-weight: 700;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.disp-baner-content-device-new .disp-baner-content-left, .disp-baner-gps .disp-baner-content-left, .disp-baner-software .disp-baner-content-left {
+    text-align: left;
+}
+.disp-baner .price-box {
+    text-align: left;
+}
+button, select {
+    text-transform: none;
+}
+
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+button {
+    appearance: auto;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
