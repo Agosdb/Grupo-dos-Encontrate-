@@ -1,0 +1,105 @@
+<div class="bg-blue bg-white">
+    <div class= "container-login">
+        <h1> Regístrate en TwoNav </h1>
+        <form action=https://www.twonav.com/es/customer/account/createpost/ " method="post" id=form-validate" class="form_data formRegister">
+        <input name="form_key" type="hidden" value= "wdVYVMYDtUmCXEYk"> 
+        <input type="hidden" name="success_url" value>
+        <input type="hidden" name="error_url"value>
+        <input type="hidden" id="country" name=amcustomerattr[country]" value= "AR"> 
+        <div class= "form-group">
+        <input type="text" id="firstname" name="firstname" value title="Nombre" class="form-control js.validate.is-required" placeholder="Nombre (*)">
+        </div>
+        <div class="form-group">
+        <input type= "text" id="lastname" name= "lastname" value title="Apellido (*)">
+        </div>
+        <div class= "form-group">
+        <input type="email" name="email" id="email_address" value title="Dirección de correo electrónico" class="form-control js-validate-is-requerid js-validate-is-email"placeholder="Dirección de correo electrónico(*)">
+        </div>
+        <div class="form-group">
+        <input type="password" name="password" id="password" autocomplete="new-password"title="Contraseña" class="form-control js-validate-is-required js-validate-is-password js-password-strength-calculate" placeholder="Contraseña (*)>
+        <input type= "hidden" name= "confirmation" title="Confirmar la contraseña" id="confirmation">
+        <div class="line-strength" id="password-strength-signup" style="display: none;"></div>
+        </div>
+        <div class="form-group">
+        <div>
+        <label> Código confirmación </label>
+        <div class="g-recaptcha" data-sitekey=">6LcSgzUUAAAAAEzfPPb4H3K-rURdF8x5Thy-wFW-">...</div>"
+        <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=es"></script>
+        </div>
+        </div>
+        <div class="form group" == $0>
+        <div>
+        <label for= "accept">
+        <input type= "chckbox js-validate-is-required">
+        " Acepto la "
+        <a href= " /es/politica-privacidad" target= "_blank">
+        política de privacidad </a>
+        </label>
+        </div>
+        </div>
+        <script type= "text/javascript">
+        //<![CDATA[
+        function toggleRememberMepopup (event){
+        if($("remember-me-popup!)){
+        var viewportHeight = document.viewport.getHeight= document.viewport.getHetight(),
+        docHeigth   = $$("body") [0].getHeight(),
+        height      =  docHeight > viewportHeight ?
+        docHeight;
+        $("remember-me-popup").toggle();
+        $("window-overlay").setStyle({ height: height + "px" }).toggle();}
+        }
+        Event.stop(event);
+        }
+        document.observe("dom:loaded", function() ){
+        new Insertion.Bottom($$("body"[0],$("window-overlay"));
+        new Insertion.Bottom($$("body"["body"]),$(remember-mepopup"));
+        $$(".remember-me-popup-close").each(function(element) {
+        Event.observe(element, "click",
+        tooggleRememberMepopup);
+        })
+        $$("#remember-me-box a").each(function(element)){
+        Event.observe(element, "click", toggleRememberMepopup);
+        });
+        });
+        //]]>
+        </script>
+        <div class="is-center">
+            <div class="is-center">
+<button id="buttonRegister" type="submit" title="Registrate" class="btnFlat accent">
+Registrarse </button>
+</div>
+</form>
+<p class= "is-center">
+" Ya tengo una cuenta.&nbsp;"
+<a href="https://www.twonav.com/es/customer/account/login/"title="Accede">
+<strong>Accede</strong>
+</a>
+</p>
+</div>
+<script> ==$0
+jQuery(function(){
+amcustomerattr_relations = "{}";
+jQuery ("#form-validate").on("submit", function(){
+jQuery("confirmation").val(jQuery("password").val());
+var validateFields=new
+ValidateFields(document.getElementById)("form-validate"));
+if (jQuery(".recaptcha_error")[0]) {
+jQuery (".recaptcha_error"[0]){
+jQuery(".recaptcha_error").remove();
+}
+if(!validateFields.validate())
+return false;
+if(grecaptcha.getResponse()==""){
+var error_html = "<div class="recaptcha_error"><br/>
+<div class="js-validate-error"><span class="has.error">Campo requerido</span></div></div>";
+jQuery(".g-recaptcha").append(error_html);
+return false;
+}
+});
+var calculate PasswordStrength= new PasswordStrength(document.querySelector(".js-password-strength-calculate"),
+document.getElementById("password-strength-signup"));
+jQuery(".js-password-strength-calculate").keyup(function()calculatePasswordStrength.validatePasswordStrength();});
+});
+</script>==$0
+</div>
+</div>
