@@ -11,3 +11,19 @@ Continuar haciendo: Seguir con la buena organización en la división de tareas 
 Hacer menos: Por ahora no encontramos nada por hacer menos
 
 Dejar de hacer: Por ahora no encontramos nada por dejar de hacer.
+
+
+# Retro Sprint 2
+
+
+La reunión realizada 10/2, participando todos los integrantes.
+
+Comenzar a hacer: Pononernos al día con teória.
+
+Hacer Más: Reuniones con mayor perioricidad.
+
+Continuar haciendo: Organizando las tareas eficientemente.
+
+Hacer menos: Por ahora no encontramos nada por hacer menos
+
+Dejar de hacer: Tener menos tiempos muertos, optimizando los tiempos.
