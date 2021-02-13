@@ -23,13 +23,4 @@ body{
 body .checkout-cart-index .page .empty-case i.fa.fa-shopping-cart{
     color: #e4ebeb;
 }
-.empty-case i{
-    font-size:140px;
-    margin-bottom: 20px;
-}
-.fa{
-    display: inline-block;
-    font: normal normal normal 14px/1 fontAwesome;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-}
+

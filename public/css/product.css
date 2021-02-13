@@ -1,4 +1,13 @@
-img {
+main .category-product{
+    width: 100%;
+    height: 100%; 
+    
+
+}
+.banner h1{
+    size: 1000px;
+}
+main img {
     border: 0;
     max-width: 100%;
     height: auto;
@@ -18,16 +27,7 @@ a:hover {
 li {
     text-align: -webkit-match-parent;
 }
-body {
-    font-family: Lato,sans-serif;
-    line-height: 1.2;
-    color: #242322;
-    min-width: 360px;
-    background-color: #fff;
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
+
 .disp-baner-content-device-new .small-type, .disp-baner-gps .small-type, .disp-baner-software .small-type {
     font-size: 18px;
     margin-bottom: 20px;
@@ -62,7 +62,7 @@ button, input, optgroup, select, textarea {
     line-height: 1.15;
     margin: 0;
 }
-button {
+button-set {
     appearance: auto;
     -webkit-writing-mode: horizontal-tb !important;
     text-rendering: auto;
@@ -86,3 +86,36 @@ button {
     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
     border-image: initial;
 }
+.empty-case i{
+    font-size:140px;
+    margin-bottom: 20px;
+}
+.fa{
+    display: inline-block;
+    font: normal normal normal 14px/1 fontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+@media (min-width: 769px)
+
+.disp-baner-content>* {
+    display: table-cell;
+    vertical-align: middle; */
+}
+/* 
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+    }
+
+    main section article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    } */
+
+/* *{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+} 
