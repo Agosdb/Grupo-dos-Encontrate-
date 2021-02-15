@@ -1,4 +1,4 @@
-h2{
+/* h2{
     margin-top: 20px;
     font-weight: 900;
     font-size: 24px;
@@ -15,12 +15,46 @@ h2{
 ::after, ::before{
     box-sizing: border-box;
 }
+
+body .checkout-cart-index .page .empty-case i.fa.fa-shopping-cart{
+    color: #e4ebeb;
+}
+ */
+*{
+    margin-top: 0;
+    padding:0;
+}
 body{
     font-family: lato,sans-serif;
     line-height:1.2;
     color: #242322;
 }
-body .checkout-cart-index .page .empty-case i.fa.fa-shopping-cart{
-    color: #e4ebeb;
+.checkout{
+    width: 80%;
+    height:300px;
+    background: black;
+
+}
+.shopping{
+    width: 80%;
+    height:30px;
+    background: black;
 }
 
+.shopping h6 {
+    margin: top 20px;
+    font-weight: 900;
+    font-size: 20px;
+    font-family: lato, sans-serif;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.fa{
+    display: inline-block;
+    font: normal normal normal 40px/1 fontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.shopping img{
+    size: 20%;
+}

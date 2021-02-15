@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -6,11 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Noto+Serif:ital,wght@0,700;1,700&family=Roboto&family=Shadows+Into+Light&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-        <link rel="stylesheet" href="/public/css/index.css">
-        <link rel="stylesheet" href="/public/css/productCar.css">
-        <link rel="stylesheet" href="/public/css/register.css">
-        <link rel="stylesheet" href="/public/css/login.css">
-        <link rel="stylesheet" href="/public/css/product.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/productCar.css">
+        <link rel="stylesheet" href="css/register.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/product.css">
         
     </head>
 <body>
@@ -35,37 +35,59 @@
                <li><a href="#">Rebajas</a></li>
            </ul>
     </div> 
-</nav> -->
+</nav>
 <!-- //Barra de Busqueda// -->
-<!-- <div class="form" action="#" method="GET">
+<div class="form" action="#" method="GET">
     <div class="input">Busqueda</div>
      <div class="submit"><i class="fa fa-search"></i></div>
 <ul>
     <!-- /*Logo Carrito de Compra*/ -->
     <li><a href="/views/productCar.html"><i class="fas fa-shopping-cart"></i></a></li>
 </ul>
-   </header> -->
+   </header>
 
    
 <!-- /*Carrito de compras vacio*/ -->
-<body class="checkout-cart-index">
+<body>
+
+<div class="checkout-cart-index">
 <div class="shopping-cart-container">
-    <div class="main">
-        <div class="col-main">
-    <h2>Carrito de Compras</h2>
-    //*<form id="cart-update" action="#" method="post"></form>*//
-        //*<input name="form-key" type="hidden" value="#">*//
+    <h6>Carrito de Compras</h6>
+    <div class="img_product">
+        <img src="img/gps-aventura-2-hiking-en-2.jpg">
+    <div class="description">
+        <h5>Cross Azul</h5>
+    <div class="cantidad">
+        <5>1</5>
+    <div class="price">
+        <h5>28900</h5>
+        <i class="far fa-trash-alt"></i>
+    </div>
+    </div>
+
+
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+    <form id="cart-update" action="#" method="post"></form>
+        <input name="form-key" type="hidden" value="#">
         <div class="empty-case is-big">
-            <i class="fa fa-shopping-cart">::Before</i>
+            <i class="fa fa-shopping-cart"></i>
             <div class="button-set">
                 <a href="#" class="btnflat is-transparent is-big">Continuar Comprando</a>
             </div>
         </div>
         </div>
         </div>  
-        ::after
-        </div> 
-        <!-- <footer>
+        </div>
+       <footer>
             <div class="footer">
                 <div class="ayuda">
                     <h4>¿Necesitas Ayuda?</h4>
@@ -95,7 +117,7 @@
                 </nav>
                 </div>
         
-        </footer>   -->
+        </footer>
         
 </body>
 </html>
