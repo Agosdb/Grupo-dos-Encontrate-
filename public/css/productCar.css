@@ -1,60 +1,55 @@
-/* h2{
-    margin-top: 20px;
-    font-weight: 900;
-    font-size: 24px;
-    font-family: lato, sans-serif;
-    margin: 0%;
-    margin-bottom: 20px;
-}
-.empty-case {
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    padding: 100px 40px;
-}
-::after, ::before{
-    box-sizing: border-box;
-}
 
-body .checkout-cart-index .page .empty-case i.fa.fa-shopping-cart{
-    color: #e4ebeb;
-}
- */
-*{
-    margin-top: 0;
-    padding:0;
-}
 body{
-    font-family: lato,sans-serif;
-    line-height:1.2;
-    color: #242322;
-}
-.checkout{
-    width: 80%;
-    height:300px;
-    background: black;
+
 
 }
-.shopping{
-    width: 80%;
-    height:30px;
-    background: black;
-}
-
-.shopping h6 {
+h6{
     margin: top 20px;
-    font-weight: 900;
-    font-size: 20px;
+    font-weight: 90;
+    font-size: 40px;
     font-family: lato, sans-serif;
     margin: 0;
     margin-bottom: 20px;
 }
+.checkout-car-index{
+    box-sizing:border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}   
+
+.shopping-car-container{
+    display:flex;
+    width: 500px;
+    height: 200px;
+    margin: 5px;
+    padding: 35px;
+    border: 1px solid black;
+    background-color: white;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    flex-flow: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+p {
+    margin: 10px;
+    font-weight: 90;
+    font-size: 20px;
+    font-family: lato, sans-serif;
+    margin-bottom: 20px;
+}
+img{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
 .fa{
     display: inline-block;
-    font: normal normal normal 40px/1 fontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-}
-.shopping img{
-    size: 20%;
+
 }
