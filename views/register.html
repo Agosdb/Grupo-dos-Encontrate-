@@ -6,43 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Noto+Serif:ital,wght@0,700;1,700&family=Roboto&family=Shadows+Into+Light&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-        <!-- <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/productCar.css"> -->
         <link rel="stylesheet" href="css/register.css">
-        <!-- <link rel="stylesheet" href="css/login.css">
-        <link rel="stylesheet" href="css/product.css"> -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
     </head>
 <body>
     <header>
-        <div class="encon">
-        <h1> ENCONTRATE </h1>
-        </div>
-        <div class="login-registro">
-            <ul>
-                <li><a href="register">Registrate</a></li>
-                <li><a href="login">Login</a></li>                
-            </ul>
-        </div>
-        <nav>
-       <div class="menu">
-           <ul>
-               <li><a href="productDetail">GPS</a></li>
-               <li><a href="#">Mapas</a></li>
-               <li><a href="#">Accesorios</a></li>
-               <li><a href="#">Software</a></li>
-               <li><a href="#">Indumentaria</a></li>
-               <li><a href="#">Rebajas</a></li>
-           </ul>
-    </div> 
-</nav>
-<!-- //Barra de Busqueda// -->
-<div class="form" action="#" method="GET">
-    <div class="input">Busqueda</div>
-     <div class="submit"><i class="fa fa-search"></i></div>
-<ul>
-    <!-- /*Logo Carrito de Compra*/ -->
-    <li><a href="productCar"><i class="fas fa-shopping-cart"></i></a></li>
-</ul>
+            <div class="encon">
+            <h1 class="titulo"> ENCONTRATE </h1>
+            </div>
+                <div class="login-registro">
+                 </div>
    </header>
 
 
@@ -52,7 +26,7 @@
 
 <div class="bg-blue bg-white">
     <div class= "container-login">
-        <h1> Regístrate en TwoNav </h1>
+        <h1> Registrate en Encontrate </h1>
         <form action=https://www.twonav.com/es/customer/account/createpost/ " method="post" id=form-validate" class="form_data formRegister">
         <input name="form_key" type="hidden" value= "wdVYVMYDtUmCXEYk"> 
         <input type="hidden" name="success_url" value>
@@ -75,7 +49,7 @@
         <div class="form-group">
         <div>
         <label> Código confirmación </label>
-        <div class="g-recaptcha" data-sitekey=">6LcSgzUUAAAAAEzfPPb4H3K-rURdF8x5Thy-wFW-">...</div>"
+        
         <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=es"></script>
         </div>
         </div>
@@ -128,30 +102,4 @@ Registrarse </button>
 </a>
 </p>
 </div>
-<script> ==$0
-jQuery(function(){
-amcustomerattr_relations = "{}";
-jQuery ("#form-validate").on("submit", function(){
-jQuery("confirmation").val(jQuery("password").val());
-var validateFields=new
-ValidateFields(document.getElementById)("form-validate"));
-if (jQuery(".recaptcha_error")[0]) {
-jQuery (".recaptcha_error"[0]){
-jQuery(".recaptcha_error").remove();
-}
-if(!validateFields.validate())
-return false;
-if(grecaptcha.getResponse()==""){
-var error_html = "<div class="recaptcha_error"><br/>
-<div class="js-validate-error"><span class="has.error">Campo requerido</span></div></div>";
-jQuery(".g-recaptcha").append(error_html);
-return false;
-}
-});
-var calculate PasswordStrength= new PasswordStrength(document.querySelector(".js-password-strength-calculate"),
-document.getElementById("password-strength-signup"));
-jQuery(".js-password-strength-calculate").keyup(function()calculatePasswordStrength.validatePasswordStrength();});
-});
-</script>==$0
-</div>
-</div>
+
