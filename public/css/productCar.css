@@ -12,8 +12,9 @@ body {
 }
 
 h6{
+    
     margin: top 20px;
-    font-weight: 90;
+    font-weight: 900;
     font-size: 24px;
     font-family: 'Caveat', cursive;
     margin: 0;
@@ -111,7 +112,10 @@ tbody {
     vertical-align: middle;
     border-color: inherit;
 }
-
+form {
+    display: block;
+    margin-top: 0em;
+}
 
 
 
