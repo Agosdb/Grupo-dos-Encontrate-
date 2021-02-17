@@ -89,10 +89,18 @@ body{
     margin: 0;
     padding: 0;
 }
+<<<<<<< HEAD
+h4 {
+=======
 
 
 .encon{
+<<<<<<< HEAD
     margin:30px;
+=======
+>>>>>>> f31f3f7f3952a4b08eca8dab71d180d135de4e3d
+    margin-top: 10px;
+>>>>>>> 108230ae503c1cd2358d91392d45f61ae3bc8334
     padding: 0 20px;
     height: 40px;
     display: block;
