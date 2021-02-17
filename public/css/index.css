@@ -6,23 +6,58 @@
 }
 /* agregado */
 header {
-    margin: 0px;
+    margin-top: 20px;
+    margin-left: 40px;
     padding: 0px;    
     box-sizing: border-box;
 }
+.pagos{background-color: black;
+    color: white;
+    text-align: center;
+}
+.cp{font-size: 28px;
+    }
+.busqueda{margin: 10px;
+}
+
 .titulo{text-align: center;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 60px; 
+    padding-bottom: 5px;
+    background-color: black;
+    color: white;
+    margin-right:20px;
+    margin-bottom:33px;
 
 }
-.login-registro{display:grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+.login-registro{
+    margin: 40px;
+    margin-top: 60px;
 }
+
+.log-reg{
+    text-align: end;
+    list-style: none;
+    margin: 10px;
+    margin-top: 15px;}
+
+
+
 .lista-menu{display:grid;
     grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     list-style: none;
+    margin: 40px;
     }
+#searchterm{font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+#search{
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
 
 .menu{display:grid;
     border: solid 2px lightseagreen;
@@ -35,6 +70,13 @@ header {
 .menu:hover{background-color: mediumseagreen;
     
 }
+
+.primera-imagen{align-items: center;
+    margin-left: 250px;
+    margin-bottom: 30px;
+
+}
+
 
 
 body{
@@ -50,7 +92,7 @@ body{
 
 
 .encon{
-    margin-top: 10px;
+    margin:30px;
     padding: 0 20px;
     height: 40px;
     display: block;
@@ -59,11 +101,29 @@ body{
 }
 .imagen-grande{
     border: 0;
-    max-width: 100%;
-    height: auto;
+ width: 100%;
+ height: 100%;
+
     display: inline-block;
     vertical-align: middle;
 }
+
+.titulo-novedades{
+    text-align: center;
+    font-family:'Gloria Hallelujah', cursive;
+    background-color: black;
+    color: white;
+    font-size: 40px;
+}
+
+.productos-destacados{text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    background-color: black;
+    color: white;
+    font-size: 35px;
+}
+
+
 h3{
     display: block;
     font-size: 1.17em;
