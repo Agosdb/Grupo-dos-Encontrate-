@@ -41,68 +41,111 @@
 </ul>
    </header>
 
-   
+
+
+
+
+<body> 
 <!-- /*Carrito de compras vacio*/ -->
-<body>
-    <h6>Carrito de Compras</h6>
+
+
+
+    <!-- <h6>Carrito de Compras</h6>
 <div class="checkout-car-index">
     <span class="shopping-car-container">    
         <img src="img/gps-aventura-2-hiking-en-2.jpg">
-        <p>Cross Azul</p>
-        <p>1</p>
+        <p class="description">Cross Azul</p>
+        <p class="qty">1</p>
         <i class="far fa-trash-alt"></i>
-        <p>$ 28.900</p>
-    </span>
-    </div>
-        <form id="cart-update" action="#" method="post"></form>
-        <input name="form-key" type="hidden" value="#">
-        <div class="empty-case is-big">
-            <div class="button-set">
-                <ul><li><a href="index">Seguir Comprando</a></li></ul>
+        <p class="price">$ 28.900</p>
+        <label class="total">
+            <p class="parcial">Total Parcial</p>
+            <!-- <p class="envio">Envio</p> -->
+            <p class="precioTotal">Precio Total</p>
+        </label>
+    </div> -->
+
+    <!-- Sección sub totales, totales y envío -->
+<div class="totals"
+        <table class="table-reviews">
+            <tbody>
+                <tr>
+                    <td>
+                        <!-- sub total -->
+                        <font style="vertical-align:inherit">
+                            Total Parcial               </font>
+                    </td>                
+                <td align="right">
+                    <div class="amount-subtotal"></div>
+                    <span class="price">$ 28.900</span>
+                </div>
+                </td>
+            </tr>         
+            <!-- Envío -->
+                <font style="vertical-align:inherit">
+                        Envio                </font> 
+        <i class="fa fa-question-circle btooltip" data-toggle="tooltip" data-placement="bottom" title data-original-title="Envío gratuito en pedidos superiores a $ 4.000" aria-describedby="tooltip83321">..</i>
+        <div class="tooltip fade botton in" role="tooltip" id="tooltip83321" style="top: 525px; left:1073.08px; display:none;">
+           <div class="tooltip-arrow" style="left: 50%,"></div>
+           <div class="tooltip-inner">
+               <font style="vertical-align:inherit;"></font>
+           </div>
+         </div>
+         </td>
+        <td align="right">
+            <div class="amount-shipment-placeholder">
+                <font style="vertical-align:inherit;">
+                    <font style="vertical-align:inherit;">Envío gratis</font>
+                </font>
             </div>
-        </div>
-        </div>
-        </div>  
-        </div>
+        </td>
+        </tr>
+        <!-- Total -->
+        <tr class="has-big-label">
+            <td>
+            <font style="vertical-align:inherit;">
+                <font style="vertical-align:inherit;">Precio Total</font>
+            </font>
+            </td>
+        <td align="right">
+            <div class="amount-grand-placeholder">
+                <span class="price">
+                    <font style="vertical-align:inherit;">
+                        <font style="vertical-align:inherit;">$ 28.900</font>
+                    </font>
+                </span>    
+            </div>
+        </td>
+        </tr>
+            </tbody>
+<div class="placer-order">
+    <button type="button" title="Seguir comprando" class="btmFlat is-transparent hidden-to-md" onclick="index">
+        <font style="vertical-align:inherit;">
+            <font style="vertical-align:inherit;">Seguir comprando        </font>
+        </font>
+    </button>
+    <button type="button" title="Pagar" class="btnFlat accent btn-proceed" onclick="#";>
+        <font style="vertical-align:inherit;">
+            <font style="vertical-align:inherit;">
+                    Pagar     </font>
+        </font>
+    </button>
+</div>
 
 
 
 
-
-
-
-       <footer>
-            <div class="footer">
-                <div class="ayuda">
-                    <h4>¿Necesitas Ayuda?</h4>
-                    <p>Contacta a nuestros asesores </p>
-                </div>
-                <div class="primera-columna">
-                <nav>
-                    <ul>
-                        <li class="Encontrate">ENCONTRATE</li>                    
-                        <li><a href="#">GPS</a></li>
-                        <li><a href="#">Mapas</a></li>
-                        <li><a href="#">Accesorios</a></li>
-                        <li><a href="#">Software</a></li>
-                        <li><a href="#">Indumentaria</a></li>
-                        <li><a href="#">Rebajas</a></li>                
-                    </ul>
-            
-                </div>
-                    <div class="segunda-columna">           
-                    <ul>
-                        <li class="Sobre-nosotros">Sobre Nosotros</li>                
-                        <li><a href="#">La Compañía</a></li>
-                        <li><a href="#">Trabajá con Nosotros</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </div>    
-                </nav>
-                </div>
         
-        </footer>
+       
+
         
-</body>
+
+
+
+
+
+
+
+       </body>
 </html>
 

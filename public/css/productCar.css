@@ -1,7 +1,14 @@
 
-body{
 
-
+body {
+        font-family: Lato,sans-serif;
+        line-height: 1.2;
+        color: #242322;
+        min-width: 360px;
+        background-color: #fff;
+        position: relative;
+        margin: 0;
+        padding: 0;
 }
 
 h6{
@@ -12,6 +19,7 @@ h6{
     margin: 0;
     margin-bottom: 20px;
     margin-left: 425px;
+    vertical-align: inherit;
 }
 .checkout-car-index{
     display:flex;
@@ -61,3 +69,60 @@ img{
     line-height: 1;
     margin-top: 25px;
 }
+.envio{
+    color: green;
+}
+i.fa.btooltip{
+    color: #00b3ad;
+}
+.table-review {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+td[Attributes Style] {
+    text-align: -webkit-right;
+}
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+div {
+    display: block;
+}
+
+element.style {
+    top: 525px;
+    left: 1073.08px;
+    display: none;
+}
+.tooltip.in {
+    opacity: 1!important;
+}
+.tooltip.bottom {
+    margin-top: 3px;
+    padding: 5px 0;
+}
+.table-review .has-big-label td {
+    padding-top: 10px;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 769px)
+body.checkout-cart-index .page .main-container .place-order .btnFlat, body.checkout-onepage-index .page .main-container .place-order .btnFlat, body.checkout-onepage-success .page .main-container .place-order .btnFlat {
+    margin-left: 10px;
+    width: auto;
