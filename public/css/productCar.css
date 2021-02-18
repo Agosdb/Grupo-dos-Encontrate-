@@ -116,9 +116,61 @@ form {
     display: block;
     margin-top: 0em;
 }
-
-
-
+input[type="hidden" i] {
+    display: none;
+    appearance: initial;
+    background-color: initial;
+    cursor: default;
+    padding: initial;
+    border: initial;
+}
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: textfield;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+body.checkout-cart-index .page .data-table .item.opt .coldel, body.checkout-onepage-index .page .data-table .item.opt .coldel, body.checkout-onepage-success .page .data-table .item.opt .coldel {
+    min-width: 100px;
+    text-align: center;
+    float: right;
+}
+body.checkout-cart-index .page .data-table .item, body.checkout-onepage-index .page .data-table .item, body.checkout-onepage-success .page .data-table .item {
+    line-height: 1.5em;
+    display: inline-block;
+}
+div {
+    display: block;
+}
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
 
 
 
