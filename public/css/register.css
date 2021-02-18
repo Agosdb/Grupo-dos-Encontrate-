@@ -2,7 +2,7 @@
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 60px; 
     padding-bottom: 5px;
-    background-color: black;
+    background-color:#B39352;
     color: white;
     margin-right:20px;
     margin-bottom:33px;
@@ -12,10 +12,18 @@
 .primero{
     text-align: center;
     font-family: 'Noto Serif', serif;
+    background-color: #DE4E2F;
+    color: white;
+    font-size: 20px;
 } 
 .form-group {
     text-align: center;
-}
+    font-family: 'Noto Serif', serif;
+    background-color: white;
+    }
 .registrarme{
     text-align: center;
+    font-family: 'Noto Serif', serif;
+    color:#B39352;
+    font-size: 13px;
 }
