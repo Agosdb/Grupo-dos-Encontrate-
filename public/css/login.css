@@ -2,9 +2,36 @@
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 60px; 
     padding-bottom: 5px;
-    background-color: black;
+    background-color:#B39352;
     color: white;
     margin-right:20px;
     margin-bottom:33px;
 
+}
+
+.hola{
+    color: #B39352;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.form-group {
+    font-size: 17px;
+    font-family: 'Gloria Hallelujah', cursive;
+
+}
+
+.correo {
+    font-size: 17px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.container-login {
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+}
+
+.tu-clave {
+    font-family: 'Gloria Hallelujah', cursive;
 }
