@@ -11,19 +11,36 @@
 
 .primero{
     text-align: center;
-    font-family: 'Noto Serif', serif;
-    background-color: #DE4E2F;
+    font-family: 'Gloria Hallelujah', cursive;
+    background-color: #de4e2f;
     color: white;
-    font-size: 20px;
+    font-size: 23px;
 } 
 .form-group {
     text-align: center;
-    font-family: 'Noto Serif', serif;
+    font-family: 'Gloria Hallelujah', cursive;
     background-color: white;
     }
 .registrarme{
     text-align: center;
-    font-family: 'Noto Serif', serif;
+ font-family: 'Gloria Hallelujah', cursive;
     color:#B39352;
     font-size: 13px;
+}
+
+.form-control js.validate.is-required {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+    
+
+.adentro {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 13px;
+}
+
+.registrarme1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 15px;
+    color: #de4e2f;
+    font-weight: bold;
 }
