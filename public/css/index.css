@@ -11,9 +11,10 @@ header {
     padding: 0px;    
     box-sizing: border-box;
 }
-.pagos{background-color: black;
+.pagos{ background-color: #DE4E2F;
     color: white;
     text-align: center;
+    margin-bottom: 10px;
 }
 .cp{font-size: 28px;
     }
@@ -24,10 +25,9 @@ header {
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 60px; 
     padding-bottom: 5px;
-    background-color: black;
+    background-color:#B39352;
     color: white;
-    margin-right:20px;
-    margin-bottom:33px;
+        margin-bottom:33px;
 
 }
 .login-registro{
@@ -39,42 +39,75 @@ header {
     text-align: end;
     list-style: none;
     margin: 10px;
-    margin-top: 15px;}
-
+    margin-top: 15px;
+margin-left:60px;
+}
 
 
 .lista-menu{display:grid;
     grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     list-style: none;
-    margin: 40px;
+    margin-left: 200px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+
+
     }
 #searchterm{font-size: 20px;
     text-align: center;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 #search{
     font-size: 20px;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-
+.carritoC{
+    list-style: none;
+    margin-left: 30px;
+}
 
 .menu{display:grid;
-    border: solid 2px lightseagreen;
+    border: solid 2px #ffb88c;
     justify-content: center;
     align-items: center;
-    background-color: lightskyblue;
-    font-size: 28px;
+    background-color: #ffb88c;
+    font-size: 40px;
     font-family: 'Caveat', cursive;
 }
-.menu:hover{background-color: mediumseagreen;
+.menu:hover{background-color: #fc863d;
+    }
+
+.letra{ color:#f53f07;}
+.letra:hover{
+    color:white;
+}
+
+.titulo-novedades{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 40px;
+    text-align:center;
+    margin-bottom: 25px;
+    background-color:#B39352;
+    color: white;
     
 }
 
-.primera-imagen{align-items: center;
-    margin-left: 250px;
-    margin-bottom: 30px;
+.productos-destacados{
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+    background-color: #DE4E2F;
+    color: white;
+}
 
+
+.primera-imagen{align-items: center;
+    margin-left: 320px;
+    margin-bottom: 30px;
 }
 
 
@@ -89,86 +122,105 @@ body{
     margin: 0;
     padding: 0;
 }
-<<<<<<< HEAD
-h4 {
-=======
 
+.imagenes-destacadas{
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+    
 
-.encon{
-<<<<<<< HEAD
-    margin:30px;
-=======
->>>>>>> f31f3f7f3952a4b08eca8dab71d180d135de4e3d
-    margin-top: 10px;
->>>>>>> 108230ae503c1cd2358d91392d45f61ae3bc8334
-    padding: 0 20px;
-    height: 40px;
-    display: block;
-    width: 100%;
-    background-color: #fff;
+    padding: 30px;
 }
-.imagen-grande{
-    border: 0;
- width: 100%;
- height: 100%;
 
-    display: inline-block;
-    vertical-align: middle;
+.imagen1{
+    width: 50%;
+    height: auto;
+    margin-left: 60px;
 }
+.imagen2{
+    width: 50%;
+    height: auto;
+margin-left: 60px;
+margin-top: 20px;
+}
+
+.titulo2{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 34px;
+    text-align:center;
+    margin-bottom: 25px;
+    background-color:#B39352;
+    color: white; 
+}
+.descripción{
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+    background-color: #DE4E2F;
+    color: white;
+}
+
 
 .titulo-novedades{
     text-align: center;
     font-family:'Gloria Hallelujah', cursive;
-    background-color: black;
+   background-color:  #B39352;
     color: white;
     font-size: 40px;
 }
 
 .productos-destacados{text-align: center;
     font-family: 'Gloria Hallelujah', cursive;
-    background-color: black;
-    color: white;
+   
     font-size: 35px;
 }
 
+.imagenes-tercermain{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
 
-h3{
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+.tercermain{margin: 5px;
+    width: 80%;
+height: auto;   
+margin-left: 60px;
+
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: Lato,sans-serif;
-    margin: 0;
+.tercermain1{margin: 5px;
+    width: 80%;
+height: auto;   
+margin-left: 60px;
+}
+.ayuda{  text-align: center;
+    font-family:'Gloria Hallelujah', cursive;
+   background-color:  #B39352;
+    color: white;
+    font-size: 40px;
     margin-top: 10px;
-    margin-bottom: 20px;
-font-size:40px;
 }
-h2{
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+
+.contacto{ font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+    background-color: #DE4E2F;
+    color: white;
+    margin-top: 10px;
 }
-.imagenes-destacadas{
-    border: 0;
-    max-width: 100%;
-    height: auto;
-    display: inline-block;
-    vertical-align: middle;
+
+.columnas-footer{display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+
+
+
+
 .footer{
     border-top: 1px solid rgba(36,35,34,.1);
     border-bottom: 1px solid rgba(36,35,34,.1);
     padding: 20px 0;
     margin: 20px 0;
+    background-color: #fff696;
 }
 p{
     display: block;
@@ -187,6 +239,32 @@ p{
     color: #242322;
     list-style: none;
     padding: 10px 0;
+}
+
+.encontrate{font-family: 'Acme', sans-serif;
+    font-size: 28px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.snosotros{font-family: 'Acme', sans-serif;
+    font-size: 28px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.en{font-family: 'Acme', sans-serif;
+    color: black;
+    font-size: 18px;
+    list-style: none;
+
+}
+
+.sn{font-family: 'Acme', sans-serif;
+    color: black;
+    font-size: 18px;
+    list-style: none;
+
 }
 ul{
     display: block;
