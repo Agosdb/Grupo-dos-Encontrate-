@@ -9,29 +9,35 @@
 
 }
 
+/*iniciar sesion recuadro*/
 .hola{
     color: #B39352;
     text-align: center;
-    font-size: 13px;
+    font-size: 14px;
     font-family: 'Gloria Hallelujah', cursive;
 }
 
+/*contraseña*/
 .form-group {
-    font-size: 17px;
+    font-size: 13px;
     font-family: 'Gloria Hallelujah', cursive;
-
+    color:#de4e2f;
 }
 
 .correo {
-    font-size: 17px;
+    font-size: 13px;
     font-family: 'Gloria Hallelujah', cursive;
-}
+    color:#de4e2f;
+    }
 
 .container-login {
     font-family: 'Gloria Hallelujah', cursive;
     text-align: center;
+    font-size: 17px;
+   color:#de4e2f;
 }
-
+/*contenido de contraseña*/
 .tu-clave {
     font-family: 'Gloria Hallelujah', cursive;
+    font-size: 10px;
 }
