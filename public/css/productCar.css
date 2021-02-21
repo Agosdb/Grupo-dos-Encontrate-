@@ -50,6 +50,7 @@ p {
     margin-bottom: 50px;
 }
 .item-productImg img{
+    display: grid;
     grid-column: x0 / x1;
     text-align: center;
     width: 120px;
