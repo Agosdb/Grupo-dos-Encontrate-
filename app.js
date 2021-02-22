@@ -21,3 +21,6 @@ app.get("/productDetail", (req, res) => {
 app.get("/register", (req, res) => {
     res.sendFile(__dirname + "/views/register.html")
 });
+app.get("/registerAdministrator", (req, res) => {
+    res.sendFile(__dirname + "/views/registerAdministrator.html")
+});
