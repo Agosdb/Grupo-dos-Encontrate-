@@ -94,7 +94,10 @@ i.fa.btooltip{
 .tooltip.in {
     opacity: 1!important;
 }
-
+.whatsapp{
+    size: 500px;
+    color: green;
+}
 
 
 

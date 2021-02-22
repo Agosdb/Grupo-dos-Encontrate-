@@ -47,6 +47,8 @@
 p{
     font-size: 24px;
     justify-content: justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
     padding: 5px;
     border-bottom: solid grey 3px;
 }
@@ -98,7 +100,7 @@ button{
     appearance: auto;
     -webkit-writing-mode: horizontal-tb !important;
     text-rendering: auto;
-    color: -internal-light-dark(black, white);
+    color: white;
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;
@@ -108,7 +110,7 @@ button{
     text-align: center;
     align-items: flex-start;
     cursor: default;
-    background-color: -internal-light-dark(red);
+    background-color: #fa6855;
     box-sizing: border-box;
     margin: 0em;
     margin-left: 270px;
@@ -116,7 +118,7 @@ button{
     padding: 1px 6px;
     border-width: 2px;
     border-style: outset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border: 1px solid #fa6855;
     border-image: initial;
 }
 .productAccesory{
@@ -153,6 +155,8 @@ button{
     grid-auto-rows: size;
     justify-content:center;
     border: solid grey 2px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
 
 }
 .productAccesory h4{
@@ -160,7 +164,10 @@ button{
     font-size: 48px;
     justify-content:space-between;
     margin-left: 30px;
-
-
-
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+.banner-pantalla{
+    width: 100%;
+    justify-content:between;
 }
