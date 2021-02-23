@@ -95,8 +95,17 @@ i.fa.btooltip{
     opacity: 1!important;
 }
 .whatsapp{
-    size: 500px;
+    size: 100px;
     color: green;
+    bottom: 15px;
+    height: 75px;
+    min-height: 73px;
+    min-width: 65px;
+    overflow: hidden;
+    position: fixed;
+    right: 15px;
+    width: 70px;
+    z-index: 2147483600;
 }
 
 
