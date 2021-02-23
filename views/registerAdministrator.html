@@ -40,27 +40,23 @@
         <div class="supplier">
             <ul>
             <li>        
+            <label for="number" id="idsupplier">Id Proveedor:</label>
+            <input type="number" id="idsupplier" name="idsupplier"></input>
+            </li>
+            <li>        
             <label for="text" id="supplier">Proveedor</label>
             <input type="text" id="supplier" name="Proveedor"></input>
             </li>
-            <li>        
-            <label for="number" id="idsupplier">Id Proveedor:</label>
-            <input type="number" id="idsupplier" name="idsupplier"></input>
             <li>
             <label for="number" id="libTime">Tiempo de Entrega:</label>
             <input type="number" id="libTime" name="libTime"></input>
             <!-- tiempo de resposición en días -->
             </li>
+            </ul>
         </button>
         <button type="newsupplier" title="newsupplier" class="btnFlat accent btn-proceed" onclick="#";>
             <font style="vertical-align:inherit;">Agregar Proveedor</font>
-        </button>
-        <!-- <button type="newActivity" title="newCategory" class="btnFlat accent btn-proceed" onclick="#";>
-            <font style="vertical-align:inherit;">Agregar Actividad</font>
-        </button> -->
-
-
-
+        </button>            
         </div>  
         <h3>Descripción del producto</h3>
         <div class="descripcion">
@@ -81,10 +77,25 @@
             <li>        
             <label for="text" id="origen">Made In:</label>
             <input type="text" id="origen" name="origen"></input>
-            </li>            
+            </li> 
+            <li>           
             <label for="number" id="vendorPack">Unidades por caja:</label>
             <input type="number" id="vendorPack" name="vendorPack"></input>
             </li>
+            </ul>
+        <button type="boxInclude" title="boxInclude" class="btnFlat accent btn-proceed" onclick="#";>
+            <font style="vertical-align:inherit;">Accesorios Incluidos</font>
+        </button>
+        <button type="techDetails" title="techDetails" class="btnFlat accent btn-proceed" onclick="#";>
+            <font style="vertical-align:inherit;">Detalles Técnicos</font>
+        </button>         
+        </div>  
+        <!-- <div class="infoTecnica"> -->
+
+
+        <!-- </div> -->
+        <div class="price">
+            <h3>Valores</h3>
             <li>
             <label for="number" id="unitCost">Costo por Unidad:</label>
             <input type="number" id="unitCost" name="unitCost"></input>
@@ -93,13 +104,23 @@
             <label for="number" id="taxes">% Impuestos:</label>
             <input type="number" id="taxes" name="taxes"></input>
             </li>
+            <li>
+            <label for="number" id="rentIncome">% Rentabilidad Estimada:</label>
+            <input type="number" id="rentIncome" name="rentIncome"></input>
+            </li>
+            <li>
+            <label for="number" id="salesPrice">Precio de Venta:</label>
+            <input type="number" id="salesPrice" name="salesPrice"></input>
+            </li>
+            <li>
+            <label for="number" id="salesPromotions">Precio Promoción:</label>
+            <input type="number" id="salesPromotions" name="salesPromotions"></input>
+            </li>
+
+
+
+
             </ul>
-        </div>  
-        <div class="infoTecnica">
-
-
-        </div>
-        <div class="price">
 
 
         </div>
