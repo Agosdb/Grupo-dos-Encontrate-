@@ -11,6 +11,7 @@ h2{
     background-color: #de4e2f;
     color: white;
     font-size: 23px;
+    
 }
 h3{
     color:black;
@@ -23,6 +24,7 @@ button {
     color: white;
     font-family : inherit;
     font-size   : 100%;
+    margin-top: 20px;
 }
 
 .label{
