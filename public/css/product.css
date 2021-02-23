@@ -166,8 +166,12 @@ button{
     margin-left: 30px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 800;
+    margin: 10px;
 }
 .banner-pantalla{
     width: 100%;
     justify-content:between;
+}
+.payment-container{
+    margin-top: 20px;
 }
