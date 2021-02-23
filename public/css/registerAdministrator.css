@@ -18,13 +18,13 @@ h3{
     text-decoration-line: underline;
 
 }
-button{
+button {
     background-color:black;
     color: white;
-    /* font-size: 15px; */
     font-family : inherit;
     font-size   : 100%;
 }
+
 .label{
     color:black;
     font-size: 50px;
