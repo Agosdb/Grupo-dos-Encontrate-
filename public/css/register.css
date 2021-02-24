@@ -44,3 +44,10 @@
     color: #de4e2f;
     font-weight: bold;
 }
+
+.confirmar {
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+       color:#B39352;
+       font-size: 20px;
+}
