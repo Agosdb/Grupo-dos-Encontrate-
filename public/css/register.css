@@ -14,7 +14,7 @@
     font-family: 'Gloria Hallelujah', cursive;
     background-color: #de4e2f;
     color: white;
-    font-size: 23px;
+    font-size: 27px;
 } 
 .form-group {
     text-align: center;
@@ -25,7 +25,7 @@
     text-align: center;
  font-family: 'Gloria Hallelujah', cursive;
     color:#B39352;
-    font-size: 13px;
+    font-size: 20px;
 }
 
 .form-control js.validate.is-required {
@@ -35,12 +35,12 @@
 
 .adentro {
     font-family: 'Gloria Hallelujah', cursive;
-    font-size: 13px;
+    font-size: 22px;
 }
 
 .registrarme1 {
     font-family: 'Gloria Hallelujah', cursive;
-    font-size: 15px;
+    font-size: 25px;
     color: #de4e2f;
     font-weight: bold;
 }
