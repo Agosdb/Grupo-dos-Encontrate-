@@ -68,7 +68,11 @@
             <li>        
             <label for="text" id="description">Descripción:</label>
             <input type="text" id="description" name="description"></input>
-            </li>
+            </li>         
+            <li>        
+                <label for="text" id="barCode">Código de Barras:</label>
+                <input type="text" id="barCode" name="barCode"></input>
+                </li> 
             <li>
                 <!-- descripción principal del producto. detalles         -->
             <label for="text" id="resenia">Reseña:</label>
@@ -88,8 +92,13 @@
         </button>
         <button type="techDetails" title="techDetails" class="btnFlat accent btn-proceed" onclick="#";>
             <font style="vertical-align:inherit;">Detalles Técnicos</font>
-        </button>         
-        </div>  
+        </button>               
+        </div> 
+        <!-- Código de Barra o QR -->
+        <div class="qrcode">
+            <span style="font-size: 48px;"><i class="fas fa-qrcode"></i></span>
+        </div> 
+
         <!-- <div class="infoTecnica"> -->
         <h3>Agregar Imagenes Oficiales del Producto</h3>
         <div class="insertImg">
@@ -97,7 +106,6 @@
             <input type="file" name="imagen" />
             </form>
         </div>
-
 
         <!-- </div> -->
         <div class="price">
@@ -133,10 +141,7 @@
             <button type="upgrade" title="trash" class="btnFlat accent btn-proceed" onclick="#";>
                 <font style="vertical-align:inherit;">Actualización Bases y Web</font>
             </button>
-
         </div>
-
-
         </div>
 
 
