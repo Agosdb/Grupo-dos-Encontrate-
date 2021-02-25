@@ -1,0 +1,47 @@
+h1{
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    background-color: #de4e2f;
+    color: white;
+    font-size: 50px;
+}
+h2{
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    background-color: #de4e2f;
+    color: white;
+    font-size: 23px;
+    
+}
+h3{
+    color:black;
+    font-size: 25px;
+    text-decoration-line: underline;
+
+}
+button {
+    background-color:black;
+    color: white;
+    font-family : inherit;
+    font-size   : 100%;
+    margin-top: 20px;
+}
+
+.label{
+    color:black;
+    font-size: 50px;
+    text-decoration-line: underline;
+      
+}
+.input{
+    width : 250px;
+    margin-top: 5px;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family : inherit;
+    font-size   : 100%;
+}
+.textarea{
+    
+}
