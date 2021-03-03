@@ -11,6 +11,9 @@ const controller = {
         },
     productCar: (req, res) => {
         return res.render ("productCar");
+    },
+    productDetail: (req, res)=>{
+        return res.render ("productDetail");
     }
 };
     module.exports = controller;

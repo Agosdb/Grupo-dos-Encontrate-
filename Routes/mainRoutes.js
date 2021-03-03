@@ -11,4 +11,6 @@ router.get ("/register", mainController.register);
 
 router.get ("/productCar", mainController.productCar);
 
+router.get ("/productDetail", mainController.productDetail);
+
 module.exports = router;
