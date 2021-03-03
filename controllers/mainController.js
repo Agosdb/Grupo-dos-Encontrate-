@@ -9,6 +9,8 @@ const controller = {
     register: (req, res) => {
        return res.render("register");
         },
+    productCar: (req, res) => {
+        return res.render ("productCar");
     }
-    
+};
     module.exports = controller;
