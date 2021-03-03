@@ -1,6 +1,7 @@
 const controller = {
     index: (req, res) => {
-    return res.render("index"); //entre comillas el nombre de lo que queremos mostrar//cambie el send 
+        return res.render("index");
+         //entre comillas el nombre de lo que queremos mostrar//cambie el send 
     //por el render para renderizar la vista//
     },
     login: (req, res) => {
@@ -18,8 +19,8 @@ const controller = {
     productEdition: (req, res) => {
         return res.render ("productEdition");
     },
-    productAdministrator: (req, res) => {
-        return res.render ("productAdministrator")
+    registerAdministrator: (req, res) => {
+        return res.render ("registerAdministrator");
     }
 };
     module.exports = controller;

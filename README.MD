@@ -34,3 +34,22 @@ https://www.garmin.com.ar/
 https://www.twonav.com/es/
 
 
+# sprint n3
+
+en las paginas:
+    productEdition
+    registerAdministrator
+
+    no se le agregan header, head y footer ya que son de uso interno.
+
+al h1 del index se le agrego un href para poder ir al inicio. pero me quedo subrayado. hay que modificarlo.
+
+Se armaron los 3 partials
+
+se mofico en package.json el archivo de inicio indes.js por app.js
+
+faltan muchos detalles de CSS ya que se ha pisado con el index.css algunas imagenes del resto.
+falta cerrar los div, etc. de register y de login
+
+hay que pasar el simbolo de Whatsapp a el footer para que aparezca en toda la pagina.
+

@@ -15,6 +15,6 @@ router.get ("/productDetail", mainController.productDetail);
 
 router.get ("/productEdition", mainController.productEdition);
 
-router.get ("/productAdministrator", mainController.productAdministrator);
+router.get ("/registerAdministrator", mainController.registerAdministrator);
 
 module.exports = router;
