@@ -53,3 +53,4 @@ falta cerrar los div, etc. de register y de login
 
 hay que pasar el simbolo de Whatsapp a el footer para que aparezca en toda la pagina.
 
+Se agrega Footer de uso interno para uso de base de datos.
