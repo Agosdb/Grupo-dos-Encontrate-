@@ -13,4 +13,8 @@ router.get ("/productCar", mainController.productCar);
 
 router.get ("/productDetail", mainController.productDetail);
 
+router.get ("/productEdition", mainController.productEdition);
+
+router.get ("/productAdministrator", mainController.productAdministrator);
+
 module.exports = router;

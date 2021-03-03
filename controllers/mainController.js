@@ -14,6 +14,12 @@ const controller = {
     },
     productDetail: (req, res)=>{
         return res.render ("productDetail");
+    },
+    productEdition: (req, res) => {
+        return res.render ("productEdition");
+    },
+    productAdministrator: (req, res) => {
+        return res.render ("productAdministrator")
     }
 };
     module.exports = controller;
