@@ -54,3 +54,34 @@ falta cerrar los div, etc. de register y de login
 hay que pasar el simbolo de Whatsapp a el footer para que aparezca en toda la pagina.
 
 Se agrega Footer de uso interno para uso de base de datos.
+
+# Sprint 4
+Recuerden que para cumplir ese objetivo necesitarán de siete rutas:
+1. /products (GET)
+Listado de productos
+2. /products/create (GET)
+Formulario de creación de productos
+3. /products/:id (GET)
+Detalle de un producto particular
+4. /products (POST)
+Acción de creación (a donde se envía el formulario)
+5. /products/:id/edit (GET)
+Formulario de edición de productos
+6. /products/:id (PUT)
+Acción de edición (a donde se envía el formulario):
+7. /products/:id (DELETE)
+Acción de borrado
+Entregable: sección funcional con listado, detalle, alta, modificación y baja de
+productos
+
+ Resumen de entregables
+★ Archivo retro.md con el resultado de la retrospectiva.
+★ Archivo daily.md con sus opiniones sobre las daylies/weeklies. (Opcional)
+★ Tablero de trabajo actualizado.
+★ Archivos products.json y users.json con datos de productos y usuarios.
+★ Administración completa de productos con:
+○ Listado
+○ Detalle
+○ Creación
+○ Edición
+○ Eliminación
