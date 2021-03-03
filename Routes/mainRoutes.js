@@ -17,4 +17,5 @@ router.get ("/productEdition", mainController.productEdition);
 
 router.get ("/registerAdministrator", mainController.registerAdministrator);
 
+
 module.exports = router;

@@ -22,5 +22,5 @@ const controller = {
     registerAdministrator: (req, res) => {
         return res.render ("registerAdministrator");
     }
-};
+  };
     module.exports = controller;
