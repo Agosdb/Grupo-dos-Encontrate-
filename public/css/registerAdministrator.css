@@ -45,3 +45,9 @@ button {
 .textarea{
     
 }
+.lista-menu{display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    list-style: none;
+    margin-left: 200px;
+    margin-bottom: 40px;
+    margin-top: 30px;
