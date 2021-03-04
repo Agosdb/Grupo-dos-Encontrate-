@@ -10,17 +10,6 @@ const controller = {
     register: (req, res) => {
        return res.render("register");
         },
-    productCar: (req, res) => {
-        return res.render ("productCar");
-    },
-    productDetail: (req, res)=>{
-        return res.render ("productDetail");
-    },
-    productEdition: (req, res) => {
-        return res.render ("productEdition");
-    },
-    registerAdministrator: (req, res) => {
-        return res.render ("registerAdministrator");
-    }
+    
   };
     module.exports = controller;
