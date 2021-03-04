@@ -27,3 +27,17 @@ Continuar haciendo: Organizando las tareas eficientemente.
 Hacer menos: Por ahora no encontramos nada por hacer menos
 
 Dejar de hacer: Tener menos tiempos muertos, optimizando los tiempos.
+
+# Reunión Retrospectiva Sprint 3
+
+La reunión se realizó el día 3/3/2021, integrantes: los tres participantes del grupo: Agostina di Bello, Lucas Alvarez y Georgina Lumello
+
+Comenzar a hacer: Repartimos las tareas del Sprint 4, y organizamos las actividades
+
+Hacer Más: Leer la teoria a tiempo para aprovechar las clases y no atrasarnos en las entregas.
+
+Continuar haciendo: Seguir manteniendo la comunicación y organizar las reuniones necesarias para que el sprint funcione.
+
+Hacer menos: Por ahora no encontramos nada por hacer menos
+
+Dejar de hacer: Por ahora no encontramos nada por dejar de hacer.
