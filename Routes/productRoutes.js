@@ -13,5 +13,11 @@ router.get ("/productEdition", productController.productEdition);
 
 router.get ("/registerAdministrator", productController.registerAdministrator);
 
+router.get ("/listProduct", productController.listProduct);
+
+
+// router.post ("/registerAdministrator", productController.create);
+
+// router.post("/save", productController.saveProduct);
 
 module.exports = router;

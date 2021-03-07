@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>   
+    <link rel="stylesheet" href="css/listProduct.css">
+    </head>
+    <body>
+        <!-- se incluye Head -->
+       <%-include('./partials/head') %>
+       <!-- Se incluye Header -->
+       <%-include('./partials/header') %>
+   
+       <!-- /* Definición categorías de productos*/ -->
+       <!-- de la pagina original solo se confecciono el recuadro principal. -->
+       <main>
+       <!-- <div class="page">     -->
+           <section class="category-product">
+               <!-- /*en pantalla ampliada las imagenes estan al lado izquier*/ -->
+               <div class="article_banner_left">
+                   <div class="img-Principal">
+                       <img src="img/<%= product.image %> " alt="<%= product.name %>
+                   </div>
+                   </div>
+               <div class="article_banner_right">
+                   <div class="main-article">
+                       <p class="activity"><%= %> Montañismo - Alpinismo</p>                 
+                       <img class="logo_products" src="img/logo-aventura-2-black.jpg">                                                            
+                       <h1>
+                       "El GPS para los deportes extremos al aire libre"
+                       </h1>
+                       <p>
+                       "Diseñado específicamente para montañismo, alpinismo y cualquier otro deporte extremo al aire libre. Este innovador GPS ha sido fabricado para resistir travesías en las condiciones meteorológicas más duras. Cuenta con una pantalla de 3,7'' con la que podrás visualizar los mapas topográficos y de carreteras, según la ruta que vayas a practicar."
+                       </p>
+                   </div>
+                   <div class="price-box">
+                       <h5 class="regularPrice">Precio Regular</h5> 
+                       <h2>$35.000</h2>
+                       <h6 class="newPrice">Precio Promoción</h6>
+                       <h3>
+                       <span class="old-price">$28.500</span>
+                       </h3>
+                   </div>
+                   
+           </section> 
+           <section class="productAccesory">
+                   <!-- <div class="block1">
+                       <div class="blockImg">
+                       <img src="img/bg-hardware-overview-02.jpg">
+                       <div class="blockDescription">
+                       <h4>Accesorio</h4>
+                       <h1>Soporte de manillar RAM</h1>
+                       <p>Esta cuna de repuesto, diseñada exclusivamente para Aventura y Trail, le permite montar su GPS en cualquier vehículo para proporcionar una vista clara de su ruta.</p>
+                       </div>
+                       </div>
+                   </div>
+                   <div class="block2">
+                       <div class="blockImg">
+                       <img src="img/gps-trail-2-bike-mountain-biking-en-1.jpg">
+                       <div class="blockDescription">
+                       <h4>Trail 2</h4>
+                       <h1>Explore la montaña de forma segura y precisa</h1>
+                       <p>GPS diseñado para senderistas, senderistas y profesionales que necesitan un dispositivo compacto y de alta precisión. Con la nueva señal GPS de Galileo para complementar las señales.</p>
+                       </div>
+                       </div>
+                   </div>
+                   <div class="block3">
+                       <div class="blockImg">
+                       <img src="img/land_small__af__7.jpg">
+                       <div class="blockDescription">
+                       <h4>Land PREMIUM</h4>
+                       <h1>Crea tu propio mundo al aire libre</h1>
+                       <p>Prepare y analice sus actividades en la mejor y más amplia variedad de mapas. Land ofrece el conjunto de herramientas más avanzado para crear y estudiar sus excursiones en cada detalle.</p>
+                       </div>
+                       </div>
+                   </div>
+               </section>
+                </section> -->
+               </div>
+        <!-- </div> -->            
+   </main>         
+    <!-- Se incluye Footer -->
+   
+    <%-include('./partials/footer') %>   
+                   
+                     
+   </body>
+   </html>
