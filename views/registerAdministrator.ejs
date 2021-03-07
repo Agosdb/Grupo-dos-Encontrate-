@@ -51,7 +51,7 @@
         <div class="descripcion">
             <!-- descripcion del producto -->
             <label for="description" class="form-label">Nombre del producto:</label>
-            <input type="text" id="description" name="description" placeholder="Ej. GPS Aventura" class="form-input">
+            <input type="text" id="description" name="description" placeholder="Ej. Aventura 2" class="form-input">
            <!-- descripción principal de funciones del producto -->
             <label for="description" class="form-label">Descripción del producto</label>
             <!-- <input type="text" id="description" name="description" placeholder="Ej. "Diseñado específicamente para montañismo, alpinismo y cualquier otro deporte extremo al aire libre. ....." class="form-input"> -->
@@ -69,6 +69,14 @@
            
             <label for="vendorPack" class="form-label">Unidades por caja:</label>
             <input type="number" id="vendorPack" name="vendorPack" placeholder="Ej. 12" class="form-input">
+            <div class="insertImgLogo">
+                <form name="logo" type="POST" enctype="multipart/formdata" >
+                <!-- <input type="file" name="imagen" /> -->
+                </form>
+            </div>
+            <label for="logo" class="form-label">Inserte Logo del Producto:</label>
+            <input type="file" name="logo" id="logo" class="form-input">
+
 
         <button type="boxInclude" title="boxInclude" class="btnFlat accent btn-proceed" onclick="#";>
             <font style="vertical-align:inherit;">Accesorios Incluidos</font>
