@@ -9,7 +9,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
     index: (req, res) => {
-        return res.render("index");
+       res.render("products", {products});
          //entre comillas el nombre de lo que queremos mostrar//cambie el send 
     //por el render para renderizar la vista//
     },
@@ -39,35 +39,39 @@ const productController = {
 
 	// Create - Form to create
 	create: (req, res) => {
-		res.render('registerAdministrator');
+		res.render('listProduct');
 	},
 	
 	// Create -  Method to store
 	store: (req, res) => {
+		let newProduct= req.body;
 		let image
 		
-		if(req.file != undefined){
-			image = req.file.filename
+		if(!req.file){
+			image = "3d.jpg"
 		} else {
-			image = '3d.jpg'
+			image = req.file.filename
 		}
+		newProduct.image=image;
 		
-		let ids = products.map(p=>p.id)
-		let newProduct = {
-			id: Math.max(...ids)+1,
-			...req.body,
-			image: image
-		};
-		// res.send(newProduct)
+		// let ids = products.map(p=>p.id)
+		// let newProduct = {
+		// 	id: Math.max(...ids)+1,
+		// 	...req.body,
+		// 	image: image
+		// };
+		res.send(newProduct)
+
 		products.push(newProduct)
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/');
+		let productsJson=JSON.stringify(products, null, ' ')
+		fs.writeFileSync(productsFilePath,productsJson);
+		res.redirect('/products');
 	},
 
 	// Update - Form to edit
 	edit: (req, res) => {
 		let productsToEdit = products.find(products=>products.id==req.params.id)
-		res.render('listProduct',{productsToEdit})
+		res.render('productEdition',{productsToEdit})
 	},
 	// Update - Method to update
 	update: (req, res) => {
@@ -86,15 +90,15 @@ const productController = {
 			image: image,
 		};
 		
-		let newProducts = products.map(product => {
+		let newProduct = products.map(product => {
 			if (products.id == productsToEdit.id) {
 				return products = {...productsToEdit};
 			}
 			return products;
 		})
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-		res.redirect('/');
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
+		res.redirect('/products');
 	},
 
 	// Delete - Delete one product from DB
