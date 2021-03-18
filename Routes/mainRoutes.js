@@ -9,5 +9,8 @@ router.get("/login", mainController.login);
 
 router.get ("/register", mainController.register);
 
+router.get ("/enConstruccion", mainController.enConstruccion);
+
+
 
 module.exports = router;

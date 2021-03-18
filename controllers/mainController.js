@@ -16,6 +16,9 @@ const controller = {
     register: (req, res) => {
        return res.render("register");
         },
+    enConstruccion: (req, res) => {
+        return res.render("enConstruccion");
+        },
 
         search: (req, res) => {
             const productDetail = JSON.parse(fs.readFileSync(productDetailFilePath, 'utf-8'));
