@@ -1,3 +1,12 @@
+const { SSL_OP_NO_TLSv1_1 } = require('constants');
+const fs = require('fs');
+const path = require('path');
+
+const productDetailFilePath = path.join(__dirname, '../data/productDataBase.json');
+const productDetail = JSON.parse(fs.readFileSync(productDetailFilePath, 'utf-8'));
+
+
+
 const productController = {
     index: (req, res) => {
         return res.render("index");
@@ -17,92 +26,86 @@ const productController = {
         return res.render ("registerAdministrator");
     },
     listProduct: (req, res) => {
-        return res.render ("listProduct");
-    }
+        const activity = this.productDetail.filter(productDetail=>productDetail.category=="gps");
+        const category = this.productDetail.filter(productDetail=>productDetail.category=="adventure");
+        res.render ("listProduct", {gps, adventure});
+    },
+    // Detail - Detail from one product
+	detail: (req, res) => {
+		let productDetail = productDetail.find(productDetail=>productDetail.id==req.params.id)
+		res.render('detail',{productDetail})
+	},// ver si el detail es valido.
+
+
+	// Create - Form to create
+	create: (req, res) => {
+		res.render('registerAdministrator');
+	},
+	
+	// Create -  Method to store
+	store: (req, res) => {
+		let image
+		
+		if(req.file != undefined){
+			image = req.file.filename
+		} else {
+			image = '3d.jpg'
+		}
+		
+		let ids = productDetail.map(p=>p.id)
+		let newProduct = {
+			id: Math.max(...ids)+1,
+			...req.body,
+			image: image
+		};
+		// res.send(newProduct)
+		productDetail.push(newProduct)
+		fs.writeFileSync(productDetailFilePath, JSON.stringify(productDetail, null, ' '));
+		res.redirect('/');
+	},
+
+	// Update - Form to edit
+	edit: (req, res) => {
+		let productToEdit = productDetail.find(productDetail=>productDetail.id==req.params.id)
+		res.render('productEdition',{productToEdit})
+	},
+	// Update - Method to update
+	update: (req, res) => {
+		let id = req.params.id;
+		let productToEdit = productDetail.find(productDetail => productDetail.id == id)
+		let image
+		if(req.file != undefined){
+			image = req.file.filename
+		} else {
+			image = productToEdit.image
+		}
+
+		productToEdit = {
+			id: productToEdit.id,
+			...req.body,
+			image: image,
+		};
+		
+		let newProducts = productDetail.map(product => {
+			if (productDetail.id == productToEdit.id) {
+				return productDetail = {...productToEdit};
+			}
+			return productDetail;
+		})
+
+		fs.writeFileSync(productDetailFilePath, JSON.stringify(newProducts, null, ' '));
+		res.redirect('/');
+	},
+
+	// Delete - Delete one product from DB
+	destroy : (req, res) => {
+		let id = req.params.id;
+		let finalProductDetail = productDetail.filter(productDetail => productDetail .id != id);
+		fs.writeFileSync(productDetailFilePath, JSON.stringify(finalProductDetail, null, ' '));
+		res.redirect('/');
+	}
     
     };
 
-    const controller = {
-	
-        // Root - Show all products
-        index: (req, res) => {
-            const inSale = products.filter(product=>product.category=='in-sale');
-            const visited = products.filter(product=>product.category=='visited');
-            res.render('products',{inSale,visited,toThousand})
-        },
-    
-        // Detail - Detail from one product
-        detail: (req, res) => {
-            let product = products.find(product=>product.id==req.params.id)
-            res.render('detail',{product,toThousand})
-        },
-    
-        // Create - Form to create
-        create: (req, res) => {
-            res.render('product-create-form');
-        },
-        
-        // Create -  Method to store
-        store: (req, res) => {
-            let image
-            
-            if(req.file != undefined){
-                image = req.file.filename
-            } else {
-                image = 'default-image.png'
-            }
-            
-            let ids = products.map(p=>p.id)
-            let newProduct = {
-                id: Math.max(...ids)+1,
-                ...req.body,
-                image: image
-            };
-            // res.send(newProduct)
-            products.push(newProduct)
-            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-            res.redirect('/');
-        },
-    
-        // Update - Form to edit
-        edit: (req, res) => {
-            let productToEdit = products.find(product=>product.id==req.params.id)
-            res.render('product-edit-form',{productToEdit,toThousand})
-        },
-        // Update - Method to update
-        update: (req, res) => {
-            let id = req.params.id;
-            let productToEdit = products.find(product => product.id == id)
-            let image
-            if(req.file != undefined){
-                image = req.file.filename
-            } else {
-                image = productToEdit.image
-            }
-    
-            productToEdit = {
-                id: productToEdit.id,
-                ...req.body,
-                image: image,
-            };
-            
-            let newProducts = products.map(product => {
-                if (product.id == productToEdit.id) {
-                    return product = {...productToEdit};
-                }
-                return product;
-            })
-    
-            fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-            res.redirect('/');
-        },
-    
-        // Delete - Delete one product from DB
-        destroy : (req, res) => {
-            let id = req.params.id;
-            let finalProducts = products.filter(product => product.id != id);
-            fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-            res.redirect('/');
-        }
-    };
+
     module.exports = productController;

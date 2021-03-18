@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <link rel="stylesheet" href="css/productDetail.css">
-    </head>
+
  <body>
+    <link rel="stylesheet" href="/css/productDetail.css">
      <!-- se incluye Head -->
     <%-include('./partials/head') %>
     <!-- Se incluye Header -->
@@ -14,6 +13,7 @@
     <main>
     <!-- <div class="page">     -->
         <section class="category-product">
+            <a href="/productDetail/create" class="action-button edit">Detalle Producto</a>
             <!-- /*en pantalla ampliada las imagenes estan al lado izquier*/ -->
             <div class="article_banner_left">
                 <div class="img-Principal">
@@ -31,7 +31,7 @@
             <div class="article_banner_right">
                 <div class="main-article">
                     <p class="small-type">Montañismo - Alpinismo</p>                 
-                    <img class="logo_products" src="img/logo-aventura-2-black.jpg">                                                            
+                    <img class="logo_products" src="img/<%=  %> ">                                                            
                     <h1>
                     "El GPS para los deportes extremos al aire libre"
                     </h1>

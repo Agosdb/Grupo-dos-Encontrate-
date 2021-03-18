@@ -41,3 +41,30 @@ Continuar haciendo: Seguir manteniendo la comunicación y organizar las reunione
 Hacer menos: Por ahora no encontramos nada por hacer menos
 
 Dejar de hacer: Por ahora no encontramos nada por dejar de hacer.
+
+
+# Reunión Retrospectiva Sprint 4
+
+La reunión se realizó el día 12/3/2021, integrantes: los tres participantes del grupo: Agostina di Bello, Lucas Alvarez y Georgina Lumello
+
+Comenzar a hacer: 
+
+Repartimos las tareas del Sprint 4, y organizamos las actividades.
+
+Hacer Más: 
+
+Cuantificar mejor las tareas sobre los tiempos y magnitud de tareas;
+Mejorar la imagen y distribución de Imagenes;
+
+
+Continuar haciendo:
+
+ Seguir manteniendo la comunicación y organizar las reuniones necesarias para que el sprint funcione.
+
+Hacer menos: 
+
+Distanciamiento de la comunicación
+
+Dejar de hacer: 
+
+Por ahora no encontramos nada por dejar de hacer.

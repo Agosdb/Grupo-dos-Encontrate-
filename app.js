@@ -1,12 +1,16 @@
+
 const express =require("express");
 const app= express();   
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const path = require('path');
+// const​ { ​check​ } ​=​​require​(​'express-validator'​);
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.set('views', './views'); // Seteo de la ubicación de la carpeta "views"
 
 let mainRoutes = require("./Routes/mainRoutes");
 let productRoutes = require("./Routes/productRoutes");
@@ -17,7 +21,7 @@ app.listen(3030, ()=> {
 });
 
 app.use("/", mainRoutes);
-app.use("/", productRoutes);
+app.use("/products", productRoutes);
 
 
 // ************ DON'T TOUCH FROM HERE ************
