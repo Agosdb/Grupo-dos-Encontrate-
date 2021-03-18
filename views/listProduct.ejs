@@ -11,6 +11,8 @@
        <!-- /* Definición categorías de productos*/ -->
        <!-- de la pagina original solo se confecciono el recuadro principal. -->
        <main>
+            <a href="/products/create" class="action-button edit">CREAR PRODUCTO</a>
+
        <!-- <div class="page">     -->
            <section class="category-product">
                <!-- /*en pantalla ampliada las imagenes estan al lado izquier*/ -->
@@ -22,16 +24,16 @@
                <div class="article_banner_right">
                    <div class="main-article">
                        <p class="activity"><%= activity %></p>                 
-                       <img class="logo" src="img/<%=logo>.jpg">                                                            
-                       <h1><%= resenia %></h1>
-                       <p> <%= description %></p>
+                       <img class="logo" src="img/<%= products.logo %>">                                                            
+                       <h1><%= products.resenia %></h1>
+                       <p> <%= products.description %></p>
                    </div>
                    <div class="price-box">
                        <h5 class="regularPrice">Precio Regular</h5> 
-                       <h2> <%= price %> </h2>
+                       <h2> <%= products.price %> </h2>
                        <h6 class="salesPrice">Precio Promoción</h6>
                        <h3>
-                       <span class="salesPrice"><%= salesPrice %></span>
+                       <span class="salesPrice"><%= products.salesPrice %></span>
                        </h3>
                    </div>
                    
