@@ -1,1 +1,90 @@
-[]
+[
+ {
+  "category": "23",
+  "activity": "232",
+  "supplier": [
+   "",
+   ""
+  ],
+  "libTime": "",
+  "description": [
+   "werqwerqr",
+   "qwerqwerqerw"
+  ],
+  "resenia": "f dfs",
+  "vendorPack": "1",
+  "unitCost": "",
+  "taxes": "",
+  "rentIncome": "",
+  "price": "",
+  "salesPrice": "",
+  "image": "image-1616174490086.jpg",
+  "id": 1
+ },
+ {
+  "category": "23",
+  "activity": "232",
+  "supplier": [
+   "",
+   ""
+  ],
+  "libTime": "",
+  "description": [
+   "werqwerqr",
+   "qwerqwerqerw"
+  ],
+  "resenia": "f dfs",
+  "vendorPack": "1",
+  "unitCost": "",
+  "taxes": "",
+  "rentIncome": "",
+  "price": "",
+  "salesPrice": "",
+  "image": "image-1616174564691.jpg",
+  "id": 2
+ },
+ {
+  "category": "",
+  "activity": "",
+  "supplier": [
+   "",
+   ""
+  ],
+  "libTime": "",
+  "description": [
+   "werqwerqr",
+   "dfa sdasdasd"
+  ],
+  "resenia": "asd ada",
+  "vendorPack": "12",
+  "unitCost": "",
+  "taxes": "",
+  "rentIncome": "",
+  "price": "",
+  "salesPrice": "",
+  "image": "image-1616174633444.jpg",
+  "id": 3
+ },
+ {
+  "category": "",
+  "activity": "",
+  "supplier": [
+   "",
+   ""
+  ],
+  "libTime": "",
+  "description": [
+   "werqwerqr",
+   "dfa sdasdasd"
+  ],
+  "resenia": "asd ada",
+  "vendorPack": "12",
+  "unitCost": "",
+  "taxes": "",
+  "rentIncome": "",
+  "price": "",
+  "salesPrice": "",
+  "image": "image-1616174654064.jpg",
+  "id": 4
+ }
+]

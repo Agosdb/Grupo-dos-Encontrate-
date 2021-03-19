@@ -11,16 +11,16 @@ const storage = multer.diskStorage({
        cb(null, './public/img'); 
     }, 
     filename: function (req, file, cb) { 
-       cb(null, `${file.filename}-${Date.now()}${path.extname(file.originalname)}`);  
+       cb(null, `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`);  
     } 
   }) 
       
   
 var uploadFile = multer({ storage: storage })
 
-router.get ("/products", productController.productDetail);
+router.get ("/", productController.index);
 
-router.get ("/productDetail", productController.productDetail);
+router.get ("/productDetail/:id", productController.productDetail);
 
 router.get ("/productCar", productController.productCar);
 

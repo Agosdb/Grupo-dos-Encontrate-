@@ -46,26 +46,28 @@ const productController = {
 	store: (req, res) => {
 		let newProduct= req.body;
 		let image
-		
+		// Agrego la imagen
 		if(!req.file){
 			image = "3d.jpg"
 		} else {
 			image = req.file.filename
 		}
 		newProduct.image=image;
-		
-		// let ids = products.map(p=>p.id)
-		// let newProduct = {
-		// 	id: Math.max(...ids)+1,
-		// 	...req.body,
-		// 	image: image
-		// };
-		res.send(newProduct)
 
+
+		// Agrego el id al producto nuevo
+		let ids = products.map(p=>p.id)
+		newProduct.id = ids.length ? Math.max(...ids) + 1 : 1,
+	
+		// res.send(newProduct)
+
+		// Guardo el producto nuevo en los productos
 		products.push(newProduct)
+
+		// Guardo el archivo con el nuevo producto
 		let productsJson=JSON.stringify(products, null, ' ')
 		fs.writeFileSync(productsFilePath,productsJson);
-		res.redirect('/products');
+		res.redirect('/');
 	},
 
 	// Update - Form to edit
