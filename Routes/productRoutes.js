@@ -29,7 +29,7 @@ router.get ("/productEdition", productController.productEdition);
 router.get ("/registerAdministrator", productController.registerAdministrator);
 
 /*** GET ALL PRODUCTS ***/ 
-// router.get ("/product", productController.product);
+// router.get ("/products", productController.product);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productController.create); 
