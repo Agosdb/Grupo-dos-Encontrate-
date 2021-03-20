@@ -2,7 +2,7 @@
 <html>
   
     <body>
-        <link rel="stylesheet" href="/css/listProduct.css">
+        <link rel="stylesheet" href="/css/products.css">
         <!-- se incluye Head -->
        <%-include('./partials/head') %>
        <!-- Se incluye Header -->
@@ -18,12 +18,12 @@
                <!-- /*en pantalla ampliada las imagenes estan al lado izquier*/ -->
                <div class="article_banner_left">
                    <div class="img-Principal">
-                       <img src="img/<%= product.image %> " alt="<%= product.name %>">
+                       <img src="img/<%= products.image %> " alt="<%= products.name %>">
                     </div>
                    </div>
                <div class="article_banner_right">
                    <div class="main-article">
-                       <p class="activity"><%= activity %></p>                 
+                       <p class="activity"><%= products.activity %></p>                 
                        <img class="logo" src="img/<%= products.logo %>">                                                            
                        <h1><%= products.resenia %></h1>
                        <p> <%= products.description %></p>

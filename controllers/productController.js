@@ -8,8 +8,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const productController = {
-    index: (req, res) => {
-       res.render("products", {products});
+    index: (req, res) => {	
+       res.render('products', {products});
          //entre comillas el nombre de lo que queremos mostrar//cambie el send 
     //por el render para renderizar la vista//
     },
@@ -25,8 +25,9 @@ const productController = {
     registerAdministrator: (req, res) => {
         return res.render ("registerAdministrator");
     },
-    listProduct: (req, res) => {
+    products: (req, res) => {
         const activity = this.products.filter(products=>products.category=="gps");
+
         const category = this.products.filter(products=>products.category=="adventure");
         res.render ("products", {gps, adventure});
     },
@@ -39,7 +40,7 @@ const productController = {
 
 	// Create - Form to create
 	create: (req, res) => {
-		res.render('listProduct');
+		res.render('products');
 	},
 	
 	// Create -  Method to store
@@ -54,12 +55,7 @@ const productController = {
 		}
 		newProduct.image=image;
 		
-		// let ids = products.map(p=>p.id)
-		// let newProduct = {
-		// 	id: Math.max(...ids)+1,
-		// 	...req.body,
-		// 	image: image
-		// };
+		
 		res.send(newProduct)
 
 		products.push(newProduct)
