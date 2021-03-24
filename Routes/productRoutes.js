@@ -7,13 +7,14 @@ const productController = require ("../controllers/productController");
 
 // Multer
 const storage = multer.diskStorage({ 
-    destination: function (req, file, cb) { 
-       cb(null, './public/img'); 
-    }, 
-    filename: function (req, file, cb) { 
-       cb(null, `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`);  
-    } 
-  }) 
+   destination: (req, file, cb) => { 
+      cb(null, './public/img'); 
+   }, 
+   filename: (req, file, cb) => { 
+       let fileName= `${Date.now()}${path.extname(file.originalname)}`;
+      cb(null, fileName);
+   } 
+ }) 
       
   
 var uploadFile = multer({ storage: storage })
@@ -33,7 +34,7 @@ router.get ("/registerAdministrator", productController.registerAdministrator);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productController.create); 
-router.post('/', uploadFile.single('image'), productController.store); 
+router.post('/products', uploadFile.single('image'), productController.store); 
 
 /*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id/', productController.products);

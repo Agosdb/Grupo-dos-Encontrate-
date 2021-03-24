@@ -3,7 +3,7 @@ const express =require("express");
 const app= express();   
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const path = require('path');
-// const​ { ​check​ } ​=​​require​(​'express-validator'​);
+
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -14,7 +14,7 @@ app.set('views', './views'); // Seteo de la ubicación de la carpeta "views"
 
 let mainRoutes = require("./Routes/mainRoutes");
 let productRoutes = require("./Routes/productRoutes");
-
+let userRoutes = require("./Routes/userRoutes");
 
 app.listen(3030, ()=> {
     console.log("Servidor prueba 3030")
@@ -22,6 +22,7 @@ app.listen(3030, ()=> {
 
 app.use("/", mainRoutes);
 app.use("/products", productRoutes);
+app.use("/users", userRoutes); 
 
 
 // ************ DON'T TOUCH FROM HERE ************

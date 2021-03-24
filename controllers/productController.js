@@ -31,6 +31,16 @@ const productController = {
         const category = this.products.filter(products=>products.category=="adventure");
         res.render ("products", {gps, adventure});
     },
+	search: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let search = req.query.keywords;
+		let productsToSearch = products.filter(products => products.name.toLowerCase().includes(search));	
+		res.render('results', { 
+			products: productsToSearch, 
+			search,
+		
+		});
+	},
     // Detail - Detail from one product
 	detail: (req, res) => {
 		let products = products.find(products=>products.id==req.params.id)

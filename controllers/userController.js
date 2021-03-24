@@ -1,0 +1,130 @@
+const { SSL_OP_NO_TLSv1_1 } = require('constants');
+const fs = require('fs');
+const path = require('path');
+const {validationResult} = require('express-validator');
+
+const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+const usersController = {
+    index: (req, res) => {
+       return res.render('users', {users});
+    },
+    processRegister: (req, res) => {
+       const resultValidation = validationResult(req);
+       
+       if (resultValidation.errors.length > 0){
+           return res.render('userRegisterForm', {
+               errors: resultValidation.mapped(),
+           })
+       }
+    },   
+    login: (req, res) => {
+        return res.render("login");
+        },
+    register: (req, res) => {
+       return res.render("register");
+        },
+    
+        search: (req, res) => {
+            const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+            let search = req.query.keywords;
+            let usersToSearch = users.filter(users => users.name.toLowerCase().includes(search));	
+            res.render('results', { 
+                users: usersToSearch, 
+                search,
+            
+            });
+        },
+    
+    //DESDE AQUI
+
+    // Detail - Detail from one product
+	detail: (req, res) => {
+		let users = users.find(users=>users.id==req.params.id)
+		res.render('detail')
+	},
+
+
+	// Create - Form to create
+	create: (req, res) => {
+		res.render('users');
+	},
+	
+	// Create -  Method to store
+	store: (req, res) => {
+		let newUsers= req.body;
+		let image
+		// Agrego la imagen
+		if(!req.file){
+			image = "3d.jpg"
+		} else {
+			image = req.file.filename
+		}
+		newUsers.image=image;
+		
+		
+		res.send(newUsers)
+
+
+		// Agrego el id al producto nuevo
+		let ids = users.map(p=>p.id)
+		newUsers.id = ids.length ? Math.max(...ids) + 1 : 1,
+	
+
+		// Guardo el producto nuevo en los productos
+		users.push(newUsers)
+
+		// Guardo el archivo con el nuevo producto
+		let usersJson=JSON.stringify(users, null, ' ')
+		fs.writeFileSync(usersFilePath,usersJson);
+		res.redirect('/');
+	},
+
+	// Update - Form to edit
+	edit: (req, res) => {
+		let usersToEdit = users.find(users=>users.id==req.params.id)
+		res.render('usersEdition',{usersToEdit})
+	},
+	// Update - Method to update
+	update: (req, res) => {
+		let id = req.params.id;
+		let usersToEdit = users.find(users => users.id == id)
+		let image
+		if(req.file != undefined){
+			image = req.file.filename
+		} else {
+			image = usersToEdit.image
+		}
+
+		usersToEdit = {
+			id: usersToEdit.id,
+			...req.body,
+			image: image,
+		};
+		
+		let newUsers = users.map(product => {
+			if (users.id == usersToEdit.id) {
+				return users = {...usersToEdit};
+			}
+			return users;
+		})
+
+		fs.writeFileSync(usersFilePath, JSON.stringify(newUsers, null, ' '));
+		res.redirect('/');
+	},
+
+	// Delete - Delete one product from DB
+	destroy : (req, res) => {
+		let id = req.params.id;
+		let finalUsers = users.filter(users => users .id != id);
+		fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
+		res.redirect('/');
+	
+    
+    }
+};
+
+  
+  
+    module.exports = usersController;

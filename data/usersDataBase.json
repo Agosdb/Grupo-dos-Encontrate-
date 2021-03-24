@@ -1,0 +1,42 @@
+[
+ {
+  "userName": "lucas",
+  "first_name": "lucas",
+  "last_name": "alvarez",
+  "email": "alvarea@hotmail.com",
+  "password": "joyalisto",
+  "category": "administrator",
+  "image": "3d.jpg",
+  "id": 1
+ },
+ {
+  "userName": "geo",
+  "first_name": "geo",
+  "last_name": "geolocalizacion",
+  "email": "go@goelal.com",
+  "password": "alsdjfaksjflkasdjfklajsdl",
+  "category": "operator",
+  "image": "3d.jpg",
+  "id": 2
+ },
+ {
+  "userName": "agos",
+  "first_name": "agos",
+  "last_name": "agossssssssssss",
+  "email": "agos@agos.com",
+  "password": "akfjalkdfjalsjdflakksdjf",
+  "category": "operator",
+  "image": "3d.jpg",
+  "id": 3
+ },
+ {
+  "userName": "asf",
+  "first_name": "asdf",
+  "last_name": "asdf",
+  "email": "asdf@asdf.com",
+  "password": "alsfjd",
+  "category": "customers",
+  "image": "3d.jpg",
+  "id": 4
+ }
+]
