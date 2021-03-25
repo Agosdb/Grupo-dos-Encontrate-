@@ -33,7 +33,7 @@ router.get ("/registerAdministrator", productController.registerAdministrator);
 // router.get ("/products", productController.product);
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/create', productController.create); 
+router.get('/products', productController.create); 
 router.post('/products', uploadFile.single('image'), productController.store); 
 
 /*** GET ONE PRODUCT ***/ 

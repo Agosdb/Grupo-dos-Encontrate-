@@ -5,10 +5,8 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-
-
 const productController = {
-    index: (req, res) => {	
+    products: (req, res) => {	
        res.render('products', {products});
          //entre comillas el nombre de lo que queremos mostrar//cambie el send 
     //por el render para renderizar la vista//
@@ -26,10 +24,9 @@ const productController = {
         return res.render ("registerAdministrator");
     },
     products: (req, res) => {
-        const activity = this.products.filter(products=>products.category=="gps");
-
-        const category = this.products.filter(products=>products.category=="adventure");
-        res.render ("products", {gps, adventure});
+        const inActivity = products.filter(product=>product.category=="activity");
+        const inCategory = products.filter(product=>product.category=="category");
+        res.render ("products", {inActivity, inCategory});
     },
 	search: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

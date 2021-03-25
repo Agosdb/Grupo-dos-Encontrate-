@@ -15,7 +15,13 @@
         <form action="/user/register" method= "post" enctype="multipart/form-data">
 
         <div class= "user_name">
-            <input type="text" id="userName" name="userName" class="adentro" placeholder="Nombre de Usuario (*)">
+            <input type="text" 
+            id="userName" 
+            name="userName" 
+            class="form-control <%= locals.errors && errors.userName ? 'is-invalid' : null %> " 
+            placeholder="Nombre de Usuario (*)"
+            value= "<%= locals.oldData ? oldData.userName : null %>"
+            >
             <% if(locals.errors && errors.userName) { %>
                 <div class="text-danger">
                     <%= errors.userName.msg %> 
@@ -24,13 +30,25 @@
         </div>
 
         <div class= "name">
-            <input type="text" id="first_name" name="first_name" class="adentro" placeholder="Nombre /s (*)">
+            <input type="text" 
+            id="first_name" 
+            name="first_name" 
+            class="form-control <%= locals.errors && errors.first_name ? 'is-invalid' : null %> "  
+            placeholder="Nombre /s (*)"
+            value= "<%= locals.oldData ? oldData.first_name : null %>"
+            >
             <% if(locals.errors && errors.first_name) { %>
                 <div class="text-danger">
                     <%= errors.first_name.msg %> 
                 </div> 
                 <% } %> 
-            <input type="text" id="last_name" name="last_name" class="adentro" placeholder="Apellido /s (*)">
+            <input type="text" 
+            id="last_name" 
+            name="last_name" 
+            class="form-control <%= locals.errors && errors.last_name ? 'is-invalid' : null %> "  
+            placeholder="Apellido /s (*)"
+            value= "<%= locals.oldData ? oldData.last_name : null %>"
+            >
             <% if(locals.errors && errors.last_name) { %>
                 <div class="text-danger">
                     <%= errors.last_name.msg %> 
@@ -39,7 +57,13 @@
         </div>  
 
         <div class= "email">
-            <input type="email" id="email" name="email" class="adentro" placeholder="Ingresa tu email (*)">
+            <input type="email" 
+            id="email" 
+            name="email" 
+            class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %> "  
+            placeholder="Ingresa tu email (*)"
+            value= "<%= locals.oldData ? oldData.email : null %>"
+            >
             <% if(locals.errors && errors.email) { %>
                 <div class="text-danger">
                     <%= errors.email.msg %> 
@@ -47,7 +71,13 @@
                 <% } %> 
         </div> 
         <div class= "password">
-            <input type="password" id="password" name="password" class="adentro" placeholder="Contraseña (*)">
+            <input type="password" 
+            id="password" 
+            name="password" 
+            class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %> "  
+            placeholder="Contraseña (*)"
+            value= "<%= locals.oldData ? oldData.password : null %>"
+            >
             <% if(locals.errors && errors.password) { %>
                 <div class="text-danger">
                     <%= errors.password.msg %> 

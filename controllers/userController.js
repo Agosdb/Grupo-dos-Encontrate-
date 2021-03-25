@@ -1,29 +1,30 @@
 const { SSL_OP_NO_TLSv1_1 } = require('constants');
 const fs = require('fs');
 const path = require('path');
-const {validationResult} = require('express-validator');
+const { validationResult } = require('express-validator');
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
-    index: (req, res) => {
-       return res.render('users', {users});
+    register: (req, res) => {
+       return res.render('register', { errors});
     },
     processRegister: (req, res) => {
        const resultValidation = validationResult(req);
        
        if (resultValidation.errors.length > 0){
-           return res.render('userRegisterForm', {
+           return res.render('register', {
                errors: resultValidation.mapped(),
-           })
+			   oldData: req.body
+           });
        }
     },   
     login: (req, res) => {
         return res.render("login");
         },
-    register: (req, res) => {
-       return res.render("register");
+    profile: (req, res) => {
+       return res.render("login");
         },
     
         search: (req, res) => {
@@ -39,12 +40,11 @@ const usersController = {
     
     //DESDE AQUI
 
-    // Detail - Detail from one product
+    // Detail - Detail from one users
 	detail: (req, res) => {
 		let users = users.find(users=>users.id==req.params.id)
 		res.render('detail')
 	},
-
 
 	// Create - Form to create
 	create: (req, res) => {
@@ -78,7 +78,7 @@ const usersController = {
 		// Guardo el archivo con el nuevo producto
 		let usersJson=JSON.stringify(users, null, ' ')
 		fs.writeFileSync(usersFilePath,usersJson);
-		res.redirect('/');
+		res.redirect('/users');
 	},
 
 	// Update - Form to edit
@@ -111,7 +111,7 @@ const usersController = {
 		})
 
 		fs.writeFileSync(usersFilePath, JSON.stringify(newUsers, null, ' '));
-		res.redirect('/');
+		res.redirect('/users');
 	},
 
 	// Delete - Delete one product from DB
@@ -119,11 +119,11 @@ const usersController = {
 		let id = req.params.id;
 		let finalUsers = users.filter(users => users .id != id);
 		fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
-		res.redirect('/');
+		res.redirect('/users');
 	
     
     }
-};
+}
 
   
   
