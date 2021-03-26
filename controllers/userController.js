@@ -2,53 +2,62 @@ const { SSL_OP_NO_TLSv1_1 } = require('constants');
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
+const User = require('../models/User');
+const bycredjs = require('bycredjs');
+
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
     register: (req, res) => {
-       return res.render('register', { errors});
+       return res.render('/users/register', { errors});
     },
     processRegister: (req, res) => {
        const resultValidation = validationResult(req);
        
        if (resultValidation.errors.length > 0){
-           return res.render('register', {
+           return res.render('/users/register', {
                errors: resultValidation.mapped(),
 			   oldData: req.body
            });
        }
+	   let userInDB = User.findByField('email', req.body.email);
+	   if (userInDB) {
+		   return res.render('/users/register', { 
+			   errors: {
+				   msg: 'Este email ya está registrado'
+			   },
+			   oldData: req.body
+			});
+	   }
+	   let userToCreate = {
+		   ...req.body,
+		   password: bcryptjs.hashSync(req.body.password, 10),
+		   avatar: req.file.filename
+	   }
+	   let userCreated = User.create(userToCreate);
+	   		return res.redirect('/users/login');
     },   
-    login: (req, res) => {
-        return res.render("login");
+    	login: (req, res) => {
+        return res.render("/users/login");
         },
-    profile: (req, res) => {
-       return res.render("login");
+   		 	profile: (req, res) => {
+       return res.render("/users/login");
         },
-    
-        search: (req, res) => {
-            const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-            let search = req.query.keywords;
-            let usersToSearch = users.filter(users => users.name.toLowerCase().includes(search));	
-            res.render('results', { 
-                users: usersToSearch, 
-                search,
-            
-            });
-        },
+           
     
     //DESDE AQUI
 
     // Detail - Detail from one users
-	detail: (req, res) => {
-		let users = users.find(users=>users.id==req.params.id)
-		res.render('detail')
+		detail: (req, res) => {
+			let users = users.find(users=>users.id==req.params.id)
+			res.render('detail')
 	},
 
 	// Create - Form to create
-	create: (req, res) => {
-		res.render('users');
+		create: (req, res) => {
+			res.render('users');
 	},
 	
 	// Create -  Method to store
@@ -82,16 +91,16 @@ const usersController = {
 	},
 
 	// Update - Form to edit
-	edit: (req, res) => {
-		let usersToEdit = users.find(users=>users.id==req.params.id)
-		res.render('usersEdition',{usersToEdit})
+		edit: (req, res) => {
+			let usersToEdit = users.find(users=>users.id==req.params.id)
+			res.render('usersEdition',{usersToEdit})
 	},
 	// Update - Method to update
-	update: (req, res) => {
-		let id = req.params.id;
-		let usersToEdit = users.find(users => users.id == id)
-		let image
-		if(req.file != undefined){
+		update: (req, res) => {
+			let id = req.params.id;
+			let usersToEdit = users.find(users => users.id == id)
+			let image
+			if(req.file != undefined){
 			image = req.file.filename
 		} else {
 			image = usersToEdit.image
