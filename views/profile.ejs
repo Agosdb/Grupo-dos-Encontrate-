@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    
+<body>
+    <link rel="stylesheet" href="/css/profile.css">
+         <!-- se incluye Head -->
+         <%-include('./partials/head') %>
+         <!-- Se incluye Header -->
+         <%-include('./partials/header') %>
+
+         <div class="presentation">
+             <div class="first_name">
+                 <h1> "Hola, <%= login.first_name %>"</h1>
+            <div class="avatar">
+                <img src= "<%= login.avatar%>">
+            </div>
+            </div>
+         </div>
+         <div class="visits">
+
+         </div>
+
+</body>         

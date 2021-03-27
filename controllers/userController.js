@@ -42,9 +42,32 @@ const usersController = {
     	login: (req, res) => {
         return res.render("/users/login");
         },
-   		 	profile: (req, res) => {
+		loginProcess: (req, res) => {
+			let userToLogin = User.findByField ('email', req.body.email);
+
+			if (userToLogin) {
+				let correctPassword = bcryptjs.compareSync (req.body.password, userToLogin.password);
+				if(correctPassword){
+					return res.send('Acceso correcto');
+				}
+			}
+			return res.render('/users/login', {
+				errors: {
+					email: {
+						msg: 'No se encuentra este mail en nuestra base de datos'
+					}
+				}
+			})
+
+		}
+
+   		profile: (req, res) => {
        return res.render("/users/login");
         },
+		profile: (req, res) => {
+			return res.render("/users/profile");
+			},
+			
            
     
     //DESDE AQUI
