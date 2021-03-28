@@ -10,6 +10,10 @@ const usersController = require ("../controllers/userController");
 //Middleware
 const uploadFile= require('../middleware/multerMiddleware');
 const validations= require('../middleware/validateRegisterMiddleware');
+const guestMiddleware= require('../middleware/guestMiddleware');
+const authMiddleware= require('../middleware/authMiddleware');
+
+
 
 const validations = [
    body('userName').notEmpty().withMessage('Selecciona tu nombre de usuario'),
@@ -34,11 +38,14 @@ const storage = multer.diskStorage({
   
 var uploadFile = multer({ storage: storage })
 
-router.get("/login", usersController.login);
-router.get("/profile", usersController.profile);
+router.get("/login", guestMiddleware, usersController.login);
+router.get("/profile", authMiddleware, usersController.profile);
+
+router.get("/logout", usersController.logout);
 
 
-router.get ("/users", usersController.register);
+
+router.get ("/register", guestMiddleware, usersController.register);
 router.post ("/register", uploadFile.single('avatars'), validations ,usersController.processRegister);
 
 

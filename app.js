@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();   
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const path = require('path');
+const session = require('express-session');
 
 app.use(express.static(path.join(__dirname, '../public')));
 // app.use(express.static("public"));
@@ -11,7 +12,11 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.set('views', './views'); // Seteo de la ubicación de la carpeta "views"
-
+app.use(session({
+  secret: "Reserved",
+  resave: false,
+  saveUninitialized: false,
+}));
 let mainRoutes = require("./Routes/mainRoutes");
 let productRoutes = require("./Routes/productRoutes");
 let userRoutes = require("./Routes/userRoutes");
