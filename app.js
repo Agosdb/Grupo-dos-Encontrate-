@@ -5,28 +5,30 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 const path = require('path');
 const session = require('express-session');
 
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static('./public'));
 app.set("view engine", "ejs");
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.urlencoded({ extended: false }));
+
 app.use(express.json());
-app.set('views', './views'); // Seteo de la ubicación de la carpeta "views"
+
 app.use(session({
   secret: "Reserved",
   resave: false,
   saveUninitialized: false,
 }));
+
 let mainRoutes = require("./Routes/mainRoutes");
-let productRoutes = require("./Routes/productRoutes");
-let userRoutes = require("./Routes/userRoutes");
+// let productRoutes = require("./Routes/productRoutes");
+// let userRoutes = require("./Routes/userRoutes");
 
 app.listen(3030, ()=> {
     console.log("Servidor prueba 3030")
 });
 
 app.use("/", mainRoutes);
-app.use("/products", productRoutes);
-app.use("/users", userRoutes); // TRAE PROBLEMAS
+// app.use("/products", productRoutes);
+// app.use("/users", userRoutes); // TRAE PROBLEMAS
 
 
 // ************ DON'T TOUCH FROM HERE ************
