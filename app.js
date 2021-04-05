@@ -20,14 +20,13 @@ app.use(session({
 let mainRoutes = require("./Routes/mainRoutes");
 let productRoutes = require("./Routes/productRoutes");
 let userRoutes = require("./Routes/userRoutes");
-
 app.listen(3030, ()=> {
     console.log("Servidor prueba 3030")
 });
 
 app.use("/", mainRoutes);
 app.use("/products", productRoutes);
-app.use("/users", userRoutes); // TRAE PROBLEMAS
+// app.use("/users", userRoutes); // TRAE PROBLEMAS
 
 
 // ************ DON'T TOUCH FROM HERE ************

@@ -7,9 +7,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
     products: (req, res) => {	
-       res.render('products', {products});
-         //entre comillas el nombre de lo que queremos mostrar//cambie el send 
-    //por el render para renderizar la vista//
+		
+      res.render('products', {products});
     },
     productCar: (req, res) => {
         return res.render ("productCar");
@@ -23,11 +22,11 @@ const productController = {
     registerAdministrator: (req, res) => {
         return res.render ("registerAdministrator");
     },
-    products: (req, res) => {
-        const inActivity = products.filter(product=>product.category=="activity");
-        const inCategory = products.filter(product=>product.category=="category");
-        res.render ("products", {inActivity, inCategory});
-    },
+    // products: (req, res) => {
+    //     const inActivity = products.filter(product=>product.category=="activity");
+    //     const inCategory = products.filter(product=>product.category=="category");
+    //     res.render ("products", {inActivity, inCategory});
+    // },
 	search: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let search = req.query.keywords;
