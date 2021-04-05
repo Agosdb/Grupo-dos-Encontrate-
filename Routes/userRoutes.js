@@ -2,16 +2,16 @@ const express = require("express");
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-const​ { body } ​=​​ require​(​'express-validator'​);
+const { body } = require('express-validator'); // TRAE PROBLEMAS
 
 
 const usersController = require ("../controllers/userController");
 
 //Middleware
-const uploadFile= require('../middleware/multerMiddleware');
-const validations= require('../middleware/validateRegisterMiddleware');
-const guestMiddleware= require('../middleware/guestMiddleware');
-const authMiddleware= require('../middleware/authMiddleware');
+// const uploadFile= require('../middleware/multerMiddleware');
+const extensionValidations= require('../middlerwares/validateRegisterMiddleware');
+const guestMiddleware= require('../middlerwares/guestMiddleware');
+const authMiddleware= require('../middlerwares/authMiddleware');
 
 
 
@@ -46,7 +46,7 @@ router.get("/logout", usersController.logout);
 
 
 router.get ("/register", guestMiddleware, usersController.register);
-router.post ("/register", uploadFile.single('avatars'), validations ,usersController.processRegister);
+router.post ("/register", uploadFile.single('avatars'), extensionValidations, validations ,usersController.processRegister);
 
 
 

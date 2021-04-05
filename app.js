@@ -6,7 +6,6 @@ const path = require('path');
 const session = require('express-session');
 
 app.use(express.static(path.join(__dirname, '../public')));
-// app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.urlencoded({ extended: false }));
@@ -27,7 +26,7 @@ app.listen(3030, ()=> {
 
 app.use("/", mainRoutes);
 app.use("/products", productRoutes);
-app.use("/users", userRoutes); 
+app.use("/users", userRoutes); // TRAE PROBLEMAS
 
 
 // ************ DON'T TOUCH FROM HERE ************

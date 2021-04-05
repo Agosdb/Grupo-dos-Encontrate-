@@ -6,7 +6,8 @@ const path = require('path');
 
 const controller = {
     index: (req, res) => {
-       return res.render('index');
+        // res.send ("HOla");
+        res.render('index');
     },
    
    

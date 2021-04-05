@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 const User = require('../models/User');
-const bycredjs = require('bycredjs');
+const bcryptjs = require('bcryptjs');
 
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
@@ -61,7 +61,7 @@ const usersController = {
 				}
 			})
 
-		}
+		},
 
    		profile: (req, res) => {
        		return res.render("userProfile",);
