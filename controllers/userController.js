@@ -154,12 +154,7 @@ const usersController = {
 		let id = req.params.id;
 		let finalUsers = users.filter(users => users .id != id);
 		fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
-		res.redirect('/users');
-	
-    
+		res.redirect('/users');    
     }
-}
-
-  
-  
+}  
     module.exports = usersController;

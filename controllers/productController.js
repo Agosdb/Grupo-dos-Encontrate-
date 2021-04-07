@@ -6,16 +6,15 @@ const productsFilePath = path.join(__dirname, '../data/productDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
-    products: (req, res) => {	
-		
+    products: (req, res) => {			
       res.render('products', {products});
     },
     productCar: (req, res) => {
         return res.render ("productCar");
     },
-    productDetail: (req, res)=>{
+    productDetail: (req, res)=>{		
         return res.render ("productDetail");
-    },
+    },// no encuentro el motivo por el cual no lo redirige. y al resto si.
     productEdition: (req, res) => {
         return res.render ("productEdition");
     },
@@ -41,8 +40,7 @@ const productController = {
 	detail: (req, res) => {
 		let products = products.find(products=>products.id==req.params.id)
 		res.render('detail',{products})
-	},// ver si el detail es valido.
-
+	},
 
 	// Create - Form to create
 	create: (req, res) => {
@@ -60,7 +58,6 @@ const productController = {
 			image = req.file.filename
 		}
 		newProduct.image=image;
-		
 		
 		res.send(newProduct)
 
@@ -88,7 +85,7 @@ const productController = {
 	// Update - Method to update
 	update: (req, res) => {
 		let id = req.params.id;
-		let productsToEdit = products.find(products => products.id == id)
+		let productsToEdit = products.find(product => products.id == id)
 		let image
 		if(req.file != undefined){
 			image = req.file.filename
