@@ -10,10 +10,13 @@ const productController = {
       res.render('products', {products});
     },
     productCar: (req, res) => {
-        return res.render ("productCar");
+
+        return res.render ("productCar",{product});
     },
     productDetail: (req, res)=>{		
-        return res.render ("productDetail");
+		let product =products.find(p=>p.id=req.params.id);
+		// res.send(product)
+        return res.render ("productDetail",{product});
     },// no encuentro el motivo por el cual no lo redirige. y al resto si.
     productEdition: (req, res) => {
         return res.render ("productEdition");
