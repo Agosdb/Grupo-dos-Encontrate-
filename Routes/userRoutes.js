@@ -26,7 +26,7 @@ const bodyValidations = [
 // Multer
 const storage = multer.diskStorage({ 
     destination: (req, file, cb) => { 
-       cb(null, './public/img/avatars'); 
+       cb(null, './public/img/avatar'); 
     }, 
     filename: (req, file, cb) => { 
         let fileName= `${Date.now()}_img${path.extname(file.originalname)}`;
@@ -37,25 +37,25 @@ const storage = multer.diskStorage({
 var uploadFile = multer({ storage: storage })
 
 router.get("/login", guestMiddleware, usersController.login);
-router.get("/profile/", authMiddleware, usersController.profile);
+router.get("/users/profile/", authMiddleware, usersController.profile);
 
 router.get("/logout", usersController.logout); // falta userLoggedMiddleware
 
 router.get ("/register", guestMiddleware, usersController.register);
-router.post ("/register", uploadFile.single('avatars'), bodyValidations ,extensionValidations, usersController.processRegister);
+router.post ("/register", uploadFile.single('avatar'), bodyValidations ,extensionValidations, usersController.processRegister);
 
 
 
 /*** CREATE ONE USERS ***/ 
 router.get('/create', usersController.create); 
-router.post('/users', uploadFile.single('avatars'), usersController.store); 
+router.post('/users', uploadFile.single('avatar'), usersController.store); 
 
 /*** GET ONE USERS ***/ 
 router.get('/detail/:id/', usersController.register);
 
 /*** EDIT ONE USERS ***/ 
 router.get('/edit/:id', usersController.edit); 
-router.put('/users/:id', uploadFile.single('avatars'), usersController.update);
+router.put('/users/:id', uploadFile.single('avatar'), usersController.update);
 
 /*** DELETE ONE USERS***/ 
 router.delete('/users/:id', usersController.destroy); 

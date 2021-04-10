@@ -11,20 +11,20 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
     register: (req, res) => {
-       return res.render('/users/register', { errors});
+       return res.render('/register', { errors});
     },
     processRegister: (req, res) => {
        const resultValidation = validationResult(req);
        
        if (resultValidation.errors.length > 0){
-           return res.render('/users/register', {
+           return res.render('/register', {
                errors: resultValidation.mapped(),
 			   oldData: req.body
            });
        }
 	   let userInDB = User.findByField('email', req.body.email);
 	   if (userInDB) {
-		   return res.render('/users/register', { 
+		   return res.render('/register', { 
 			   errors: {
 				   msg: 'Este email ya está registrado'
 			   },
@@ -37,10 +37,10 @@ const usersController = {
 		   avatar: req.file.filename
 	   }
 	   let userCreated = User.create(userToCreate);
-	   		return res.redirect('/users/login');
+	   		return res.redirect('/login');
     },   
     	login: (req, res) => {
-        return res.render("/users/login");
+        return res.render("/login");
         },
 		loginProcess: (req, res) => {
 			let userToLogin = User.findByField ('email', req.body.email);
@@ -50,10 +50,10 @@ const usersController = {
 				if(correctPassword){
 					delete userToLogin.password;
 					req.session.userLogged = userToLogin;
-					return res.redirect('/user/profile');
+					return res.redirect('/profile');
 				}
 			}
-			return res.render('/users/login', {
+			return res.render('/login', {
 				errors: {
 					email: {
 						msg: 'No se encuentra este mail en nuestra base de datos'
@@ -68,7 +68,7 @@ const usersController = {
         },
 		logout: (req, res) => {
 			res.session.destroy();
-			return res.redirect('/');
+			return res.redirect('/users');
 		},
 			
            

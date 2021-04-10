@@ -8,10 +8,10 @@
          <!-- Se incluye Header -->
          <%-include('./partials/header') %>
 
-<div class="users_registers">
-    <div class= "container-login">
-        <h1 class="primero"> Creá una cuenta</h1>
-        <form method= "post" action="/user/register" enctype="multipart/form-data">
+    <form action='/users/create' method="POST" enctype="multipart/form-data"> 
+
+    <div class="users_registers">
+    <h1 class="primero"> Creá una cuenta</h1> 
 
         <div class= "user_name">
             <input type="text" 
@@ -94,7 +94,7 @@
         </div>
 
         <div class= "avatar">
-        <label for="image" class="form-label">Ingrese su foto o Avatar:</label>
+        <label for="avatar" class="form-label">Ingrese su foto o Avatar:</label>
 		<input type="file" name="avatar" id="avatar" class="form-input">
         </div>           
 
@@ -103,16 +103,19 @@
             <div class="registrarme">
         <button id="buttonRegister" type="submit" title="Registrate" class="registrarme1">
                 REGISTRARME </button>
-        </div>
+            </div>
 
-<p class= "is-center">
-    ¿Ya tenes cuenta?
-<a href="/login" title="Accede">
-<strong>Accedé</strong>
-</a>
-</p>
-</div>
-</form>
+        <p class= "is-center">
+                 ¿Ya tenes cuenta?
+        <a href="/users/login" title="Accede">
+        <strong>Accedé</strong>
+        </a>
+        </p>
+        </div>
+    </form>
+    </div>
  <!-- Se incluye Footer -->
 
- <%-include('./partials/footer') %> 
+ <%-include('./partials/footer') %>
+</body>
+ </html>

@@ -1,0 +1,119 @@
+.page{
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex-box;
+    box-sizing: border-box;
+    justify-content:center;
+    align-items: center;
+    row-gap: 5px;
+    column-gap: 5px;
+    cursor: pointer;
+}
+.category-product{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0;
+    justify-content: center;
+    align-items: center;
+    width: 80%;  
+    height: 30%;
+    
+    }
+.article_banner_left{
+    display: grid;
+    grid-column-gap: 0;
+    /* grid-auto-rows: size; */
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    }
+.img-Principal img{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: center; 
+    padding: 5px;
+    height: auto;
+    margin-left: 10px;
+    width: 360px;
+    height: 240px;
+}
+
+p{
+    font-size: 12px;
+    justify-content: justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    padding: 5px;
+    border-bottom: solid grey 3px;
+}
+h5{
+    font-size: 15px;
+    color: black;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+}
+h6{
+    font-size: 15px;
+    color: blue;
+    font-weight: 900;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.article_banner_right{
+    display: grid;
+    grid-template-rows: size;
+    grid-auto-flow: size;
+    grid-column-gap: 0;
+    justify-content: left;
+
+
+}
+.main-article h1{
+    font-size: 15px;
+}
+h2{
+    font-size: 1em;
+    color: red;
+    text-decoration:line-through;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 300px;
+}
+.price-box h3{
+    font-size: 1em;
+    color:black;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 270px;
+}
+
+.blockImg img{
+    /* display: grid;
+    grid-auto-columns: size; */
+    justify-content: space-between;
+    align-items: flex-start;
+    position:center;
+    padding: 5px;
+    width: 480px;
+    height: 360px;
+    margin: 20px;
+    
+}
+.blockDescription{
+    display:grid;
+    grid-auto-rows: size;
+    justify-content:space-between;
+
+}
+
+.banner-pantalla{
+    width: 100%;
+    justify-content:between;
+}
+.payment-container{
+    margin-top: 20px;
+}

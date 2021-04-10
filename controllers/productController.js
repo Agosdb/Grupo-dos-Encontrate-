@@ -15,7 +15,6 @@ const productController = {
     },
     productDetail: (req, res)=>{		
 		let product =products.find(p=>p.id=req.params.id);
-		// res.send(product)
         return res.render ("productDetail",{product});
     },// no encuentro el motivo por el cual no lo redirige. y al resto si.
     productEdition: (req, res) => {
@@ -24,12 +23,7 @@ const productController = {
     registerAdministrator: (req, res) => {
         return res.render ("registerAdministrator");
     },
-    // products: (req, res) => {
-    //     const inActivity = products.filter(product=>product.category=="activity");
-    //     const inCategory = products.filter(product=>product.category=="category");
-    //     res.render ("products", {inActivity, inCategory});
-    // },
-	search: (req, res) => {
+    search: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let search = req.query.keywords;
 		let productsToSearch = products.filter(products => products.name.toLowerCase().includes(search));	
