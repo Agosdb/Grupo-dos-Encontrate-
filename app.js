@@ -11,11 +11,17 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
 
+// const userLoggedMiddleware = require ('../middleware/userLoggedMiddleware'); DA ERROR
+
+
 app.use(session({
   secret: "Reserved",
   resave: false,
   saveUninitialized: false,
 }));
+
+// app.use(userLoggedMiddleware); DA ERROR
+
 
 let mainRoutes = require("./Routes/mainRoutes");
 let productRoutes = require("./Routes/productRoutes");
@@ -27,8 +33,7 @@ app.listen(3030, ()=> {
 
 app.use("/", mainRoutes);
 app.use("/products", productRoutes);
-app.use("/users", userRoutes); // TRAE PROBLEMAS
-
+app.use("/users", userRoutes); 
 
 // ************ DON'T TOUCH FROM HERE ************
 // ************ catch 404 and forward to error handler ************
@@ -46,6 +51,4 @@ app.use((err, req, res, next) => {
   // res.render('error'); 
 });
 
-// ************ exports app - dont'touch ************
-// ************ exports app - dont'touch ************
 module.exports = app;
