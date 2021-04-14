@@ -64,7 +64,7 @@ const usersController = {
 		},
 
    		profile: (req, res) => {
-       		return res.render("userProfile",);
+       		return res.render("userProfile");
         },
 		logout: (req, res) => {
 			res.session.destroy();

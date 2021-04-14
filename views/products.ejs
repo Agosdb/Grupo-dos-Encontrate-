@@ -12,7 +12,7 @@
     <!-- /* Definición categorías de productos*/ -->
     <!-- de la pagina original solo se confecciono el recuadro principal. -->
     <main>
-        <a href="/products/create" class="action-button edit">CREAR PRODUCTO</a>
+        <a href="/products" class="action-button edit">CREAR PRODUCTO</a>
         
         <div class="page">    
             <% for (product of products) { %> 
@@ -25,7 +25,7 @@
                 <div class="article_banner_right">
                     <div class="main-article">
                         <p class="activity"><%=product.activity %></p>                 
-                        <img class="logo" src="/img/<%=product.image %>">                                                            
+                        <img class="logo" src="/img/<%=product.logo %>">                                                            
                         <a href="/products/productDetail/<%=product.id %>"><h1><%=product.resenia %></h1></a>
                         <p> <%=product.description %></p>
                     </div>
