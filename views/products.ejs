@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
-<%- include('./partials/head') %>
+<head>
+    <%-include('./partials/head') %>
+    <link rel="stylesheet" href="/css/products.css">
+</head>
 
 <!-- HACER UN CSS ESPECIFICO PARA ESTA PAGINA O COPIAR Y CORREGIR, YA QUE SE COPIO DEL DETAIL PARA VER COMO QUEDABA -->
 
 <body>
-    <link rel="stylesheet" href="/css/products.css">
+   
     <!-- Se incluye Header -->
     <%- include('./partials/header') %>
     
@@ -16,38 +19,37 @@
     
         <div class="page">    
             <% for (product of products) { %> 
-            <section class="category-product">
-                <div class="article_banner_left">
-                    <div class="img-Principal">
-                        <img src="/img/<%=product.image %> " alt="<%=product.description[0] %>">
-                    </div>
-                </div>
-                <div class="article_banner_right">
-                    <div class="main-article">
-                        <p class="activity"><%=product.activity %></p>                 
-                        <img class="logo" src="/img/<%=product.logo %>">                                                            
-                        <a href="/products/productDetail/<%=product.id %>"><h1><%=product.resenia %></h1></a>
-                        <p> <%=product.description %></p>
-                    </div>
-                    <div class="price-box">
-                        <h5 class="regularPrice">Precio Regular</h5> 
-                        <div class="price">
-                        <h2> <%=product.price %> </h2>
+                <section class="category-product">
+                    <div class="article_banner_left">
+                        <div class="img-Principal">
+                            <img src="/img/<%=product.image %> " alt="<%=product.description[0] %>">
                         </div>
-                    
-                        <h6 class="salesPrice">Precio Promoción</h6>
-                        <div class="salesPrice">
-                        <h3><span class="salesPrice"><%=product.salesPrice %></span></h3>
                     </div>
-                    </div>
-                </div>  
-            </section> 
+                    <div class="article_banner_right">
+                        <div class="main-article">
+                            <p class="activity"><%=product.activity %></p>                                                           
+                            <a href="/products/productDetail/<%= product.id %>"><h1><%= product.resenia %></h1></a>
+                            <p> <%=product.description[1] %></p>
+                        </div>
+                        <div class="price-box">
+                            <h5 class="regularPrice">Precio Regular</h5> 
+                            <div class="price">
+                            <h2> <%= product.price %> </h2>
+                            </div>
+                        
+                            <h6 class="salesPrice">Precio Promoción</h6>
+                            <div class="salesPrice">
+                                <h3><span class="salesPrice"><%= product.salesPrice %></span></h3>
+                            </div>
+                        </div>
+                    </div>  
+                </section> 
             <% } %> 
         </div>   
         
     </main>         
     
-    <%- include('./partials/footer') %>    
+    <%-include('./partials/footer') %>    
 </body>
    
 </html>

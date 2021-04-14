@@ -29,10 +29,8 @@ router.get ("/registerAdministrator", productController.registerAdministrator);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productController.create); 
-router.post('/products', uploadFile.single('image'), productController.store); 
+router.post('/', uploadFile.single('image'), productController.store); 
  
-router.get('/detail/:id/', productController.products);
-
 router.get('/edit/:id', productController.edit); 
 router.put('/:id', uploadFile.single('image'), productController.update);
 
