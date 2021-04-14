@@ -12,8 +12,8 @@
     <!-- /* Definición categorías de productos*/ -->
     <!-- de la pagina original solo se confecciono el recuadro principal. -->
     <main>
-        <a href="/products" class="action-button edit">CREAR PRODUCTO</a>
-        
+        <a href="/products" class="action-button edit"></a>
+    
         <div class="page">    
             <% for (product of products) { %> 
             <section class="category-product">
@@ -31,11 +31,14 @@
                     </div>
                     <div class="price-box">
                         <h5 class="regularPrice">Precio Regular</h5> 
+                        <div class="price">
                         <h2> <%=product.price %> </h2>
+                        </div>
+                    
                         <h6 class="salesPrice">Precio Promoción</h6>
-                        <h3>
-                            <span class="salesPrice"><%=product.salesPrice %></span>
-                        </h3>
+                        <div class="salesPrice">
+                        <h3><span class="salesPrice"><%=product.salesPrice %></span></h3>
+                    </div>
                     </div>
                 </div>  
             </section> 

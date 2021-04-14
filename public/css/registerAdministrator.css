@@ -1,3 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+.pageAdministrator{
+    box-sizing: border-box;   
+}
+.category {
+    display: grid;
+    grid-template-rows: size;
+    grid-auto-flow: size;
+    grid-column-gap: 0;
+    justify-content: left;  
+}
+.description{
+    display: grid;
+    grid-template-rows: size;
+    grid-auto-flow: size;
+    grid-column-gap: 0;
+    justify-content: left;  
+}
+
 h1{
     text-align: center;
     font-family: 'Gloria Hallelujah', cursive;
@@ -10,8 +33,7 @@ h2{
     font-family: 'Gloria Hallelujah', cursive;
     background-color: #de4e2f;
     color: white;
-    font-size: 23px;
-    
+    font-size: 23px;    
 }
 h3{
     color:black;

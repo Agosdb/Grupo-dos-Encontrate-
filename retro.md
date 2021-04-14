@@ -68,3 +68,29 @@ Distanciamiento de la comunicación
 Dejar de hacer: 
 
 Por ahora no encontramos nada por dejar de hacer.
+
+# Reunión Retrospectiva Sprint 5
+
+La reunión se realizó el día 14/4/2021, integrantes: los tres participantes del grupo: Georgina Lumello y Lucas Alvarez.
+
+Comenzar a hacer: 
+
+Repartimos las tareas del Sprint 5, y organizamos las actividades.
+
+Hacer Más: 
+
+Cuantificar mejor las tareas sobre los tiempos y magnitud de tareas;
+Mejorar la imagen y distribución de Imagenes;
+
+
+Continuar haciendo:
+
+ <!-- Seguir manteniendo la comunicación y organizar las reuniones necesarias para que el sprint funcione. -->
+
+Hacer menos: 
+
+<!-- Distanciamiento de la comunicación -->
+
+Dejar de hacer: 
+
+<!-- Por ahora no encontramos nada por dejar de hacer. -->
