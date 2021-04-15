@@ -11,22 +11,25 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
     register: (req, res) => {
-       return res.render('/register', { errors});
+       return res.render('register', { errors});
     },
     processRegister: (req, res) => {
        const resultValidation = validationResult(req);
        
        if (resultValidation.errors.length > 0){
-           return res.render('/register', {
+           return res.render('register', {
                errors: resultValidation.mapped(),
 			   oldData: req.body
            });
        }
 	   let userInDB = User.findByField('email', req.body.email);
 	   if (userInDB) {
-		   return res.render('/register', { 
+		   return res.render('register', { 
 			   errors: {
-				   msg: 'Este email ya está registrado'
+				   email: {
+					msg: 'Este email ya está registrado'
+				   }
+				   
 			   },
 			   oldData: req.body
 			});
@@ -37,10 +40,10 @@ const usersController = {
 		   avatar: req.file.filename
 	   }
 	   let userCreated = User.create(userToCreate);
-	   		return res.redirect('/login');
+	   		return res.redirect('/users/login');
     },   
     	login: (req, res) => {
-        return res.render("/login");
+        return res.render("login");
         },
 		loginProcess: (req, res) => {
 			let userToLogin = User.findByField ('email', req.body.email);
@@ -50,25 +53,30 @@ const usersController = {
 				if(correctPassword){
 					delete userToLogin.password;
 					req.session.userLogged = userToLogin;
-					return res.redirect('/profile');
+					// 
+					if(req.body.remember_user) {
+						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+					}
+					return res.redirect('/users/profile');
 				}
 			}
-			return res.render('/login', {
+			return res.render('login', {
 				errors: {
 					email: {
 						msg: 'No se encuentra este mail en nuestra base de datos'
 					}
 				}
-			})
+			});
 
 		},
-
    		profile: (req, res) => {
-       		return res.render("userProfile");
+       		return res.render("userProfile",{
+				user: req.session.userLogged
+			   });
         },
 		logout: (req, res) => {
 			res.session.destroy();
-			return res.redirect('/users');
+			return res.redirect('/');
 		},
 			
            

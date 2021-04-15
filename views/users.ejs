@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
-<%- include('./partials/head') %>
+
 
 <body>
-    <link rel="stylesheet" href="/css/products.css">
-    <!-- Se incluye Header -->
-    <%- include('./partials/header') %>
-    
+ 
     <!-- /* Definición categorías de productos*/ -->
     
     <main>
@@ -15,12 +12,12 @@
         <% for (product of products) { %> 
          <div class="article_banner_left">
          <div class="avatar">
-             <img src="/img/avatar/<%=users.avatar %> " alt="<%=users.userName[0] %>">
+             <img src="/img/avatar/<%=users.avatar %> " alt="<%=users.first_name[0] %>">
          </div>
      </div>
      <div class="article_banner_right">
         <div class="usersInfo">
-             <p class="userName"><%=users.userName %></p> 
+            
              <p class="first_name"><%=users.first_name %></p>    
              <p class="email"><%=users.email %></p>    
              <p class="password"><%=users.password %></p>   
