@@ -183,6 +183,9 @@ En cada caso deberán implementar el comportamiento que corresponda:
     ● (Opcional) Productos de cada carrito de compras.
 Les sugerimos utilizar draw.io ya que es fácil de usar y soporta diagramas DER.
 
+https://app.diagrams.net/?libs=general;uml#HAgosdb%2FGrupo-dos-Encontrate-%2Fmaster%2FEncontrateHome%2FUntitled%20Diagram.drawio
+
+
 # Entregable: 
     Diagrama de entidad-relación de su base de datos en formato PDF.
 
