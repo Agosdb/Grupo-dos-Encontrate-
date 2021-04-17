@@ -167,6 +167,8 @@ En cada caso deberán implementar el comportamiento que corresponda:
             ● Hacer Funcionar el Login;
     ● En general corregir CSS;
     ● Vistas en celulares, y distintos dispositivos;
+# Modificar INDEX, 
+    Hacer que muestre procutos por categoría. 
 
 # Bases de datos y Sequelize
 
