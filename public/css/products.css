@@ -137,3 +137,37 @@ h2{
 .payment-container{
     margin-top: 20px;
 }
+/* .add a{
+    display:block;
+    position: relative;
+    width:50%;
+    padding-bottom: 50%;
+    background: #111;
+    transition: border-radius 0.3s ease, transform 0.2s ease;
+}
+.add a svg{
+    display: block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -7px 0 0 -7px;
+    opacity: 0;
+    fill: #fff;
+    transform: scale(0.6) rotate(-45deg);
+    transition: all 0.15s ease;
+    -webkit-backface-visibility: hidden;
+}
+body,
+html {
+    height: 100%;
+    display: grid;
+    background: #fff;
+}
+.add {
+    margin: auto;
+}
+.add{
+    width: ;
+} */

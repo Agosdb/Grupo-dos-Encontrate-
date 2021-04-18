@@ -167,6 +167,13 @@ En cada caso deberán implementar el comportamiento que corresponda:
             ● Hacer Funcionar el Login;
     ● En general corregir CSS;
     ● Vistas en celulares, y distintos dispositivos;
+# Les sugerimos esta estructura, aunque si trabajaron diferente, vale igual. 😉
+    ● Rutas: src/routes/users.js
+    ● Controlador: src/controllers/usersController.js
+    ● Vistas: src/views/users/
+    ● Directorio para imágenes: public/images/users/
+    ● Colección: src/data/users.json
+
 # Modificar INDEX, 
     Hacer que muestre procutos por categoría. 
 

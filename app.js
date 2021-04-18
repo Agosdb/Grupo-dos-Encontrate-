@@ -1,8 +1,10 @@
 
 const express = require("express");
-const app = express();   
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
+const cookies = require('cookie-parser');
+
+const app = express();   
 
 app.use(express.static('./public'));
 app.set("view engine", "ejs");
@@ -11,7 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
 
-// const userLoggedMiddleware = require ('../middleware/userLoggedMiddleware'); DA ERROR
+// const userLoggedMiddleware = require ('../middleware/userLoggedMiddleware'); //DA ERROR
 
 
 app.use(session({
@@ -20,7 +22,9 @@ app.use(session({
   saveUninitialized: false,
 }));
 
-// app.use(userLoggedMiddleware); DA ERROR
+app.use(cookies());
+
+// app.use(userLoggedMiddleware); //DA ERROR
 
 
 let mainRoutes = require("./Routes/mainRoutes");
