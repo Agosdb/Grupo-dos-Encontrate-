@@ -15,7 +15,7 @@ const authMiddleware= require('../middlewares/authMiddleware');
 
 
 const bodyValidations = [
-   body('userName').notEmpty().withMessage('Selecciona tu nombre de usuario'),
+   // body('userName').notEmpty().withMessage('Selecciona tu nombre de usuario'),
    body('first_name').notEmpty().withMessage('Completa tu nombre'),
    body('last_name').notEmpty().withMessage('Completa tu apellido'),
    body('email').notEmpty().withMessage('Completa tu mail'),
@@ -36,28 +36,31 @@ const storage = multer.diskStorage({
   
 var uploadFile = multer({ storage: storage })
 
-router.get("/login", guestMiddleware, usersController.login);
-router.get("/users/profile/", authMiddleware, usersController.profile);
+//loginProcess
 
-router.get("/logout", usersController.logout); // falta userLoggedMiddleware
+router.get("/login", guestMiddleware, usersController.loginProcess);
+router.get("/login", authMiddleware, usersController.login);
+
+//Register
 
 router.get ("/register", guestMiddleware, usersController.register);
 router.post ("/register", uploadFile.single('avatar'), bodyValidations ,extensionValidations, usersController.processRegister);
 
-
+//logout
+router.get("/logout", usersController.logout); // falta userLoggedMiddleware
 
 /*** CREATE ONE USERS ***/ 
 router.get('/create', usersController.create); 
-router.post('/users', uploadFile.single('avatar'), usersController.store); 
+router.post('/', uploadFile.single('avatar'), usersController.store); 
 
 /*** GET ONE USERS ***/ 
 router.get('/detail/:id/', usersController.register);
 
 /*** EDIT ONE USERS ***/ 
 router.get('/edit/:id', usersController.edit); 
-router.put('/users/:id', uploadFile.single('avatar'), usersController.update);
+router.put('/:id', uploadFile.single('avatar'), usersController.update);
 
 /*** DELETE ONE USERS***/ 
-router.delete('/users/:id', usersController.destroy); 
+router.delete('/:id', usersController.destroy); 
 
 module.exports = router;

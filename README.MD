@@ -167,6 +167,15 @@ En cada caso deberán implementar el comportamiento que corresponda:
             ● Hacer Funcionar el Login;
     ● En general corregir CSS;
     ● Vistas en celulares, y distintos dispositivos;
+# Les sugerimos esta estructura, aunque si trabajaron diferente, vale igual. 😉
+    ● Rutas: src/routes/users.js
+    ● Controlador: src/controllers/usersController.js
+    ● Vistas: src/views/users/
+    ● Directorio para imágenes: public/images/users/
+    ● Colección: src/data/users.json
+
+# Modificar INDEX, 
+    Hacer que muestre procutos por categoría. 
 
 # Bases de datos y Sequelize
 
@@ -182,6 +191,9 @@ En cada caso deberán implementar el comportamiento que corresponda:
     ○ Con detalle de quién hizo la compra, cantidad de ítems y precio total.
     ● (Opcional) Productos de cada carrito de compras.
 Les sugerimos utilizar draw.io ya que es fácil de usar y soporta diagramas DER.
+
+https://app.diagrams.net/?libs=general;uml#HAgosdb%2FGrupo-dos-Encontrate-%2Fmaster%2FEncontrateHome%2FUntitled%20Diagram.drawio
+
 
 # Entregable: 
     Diagrama de entidad-relación de su base de datos en formato PDF.

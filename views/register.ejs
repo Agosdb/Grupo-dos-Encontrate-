@@ -1,34 +1,15 @@
 <!DOCTYPE html>
 <html>
-         <!-- se incluye Head -->
-         <%-include('./partials/head') %>
-<body>
-    <!-- <link rel="stylesheet" href="/css/register.css"> -->
 
-         <!-- Se incluye Header -->
-         <%-include('./partials/header') %>
+<body>
+
 
     <form action='/users/create' method="POST" enctype="multipart/form-data"> 
 
     <div class="users_registers">
     <h1 class="primero"> Creá una cuenta</h1> 
 
-        <div class= "user_name">
-            <input type="text" 
-            id="userName" 
-            name="userName" 
-            class="form-control <%= locals.errors && errors.userName ? 'is-invalid' : null %> " 
-            placeholder="Nombre de Usuario (*)"
-            value= "<%= locals.oldData ? oldData.userName : null %>"
-            >
-            <% if(locals.errors && errors.userName) { %>
-                <div class="text-danger">
-                    <%= errors.userName.msg %> 
-                </div> 
-                <% } %> 
-        </div>
-
-        <div class= "name">
+            <div class= "name">
             <input type="text" 
             id="first_name" 
             name="first_name" 

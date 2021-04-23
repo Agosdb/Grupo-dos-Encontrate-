@@ -6,38 +6,48 @@
  <body>
             <!-- Se incluye Header -->
             <%-include('./partials/header') %>    
+        <!-- Login-Form -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+             <h2>Formulario de Login</h2>
 
-   
-
-     <!-- <div class = "page">
-        <div class = "main-container col1-layout">
-        <div class = "main">
-        <div class = "col-main">
-        <div class = "account-login bg-white">
-        <div class = "container-login">
-        <h1> Iniciar sesión en Encontrate</h1>
-        <div class= "inciar" action="https://www.twonav.com./es/customer/account/loginPost/" method="post" id="login-form">
-        <input name= "form_key" type="hidden" value= "TLBhElk24uZUBQa7">
+                <form method="POST" action="/user/login">
+                    <div class="row">
+                        <div class="col-md-6 my-2">
+                            <div class="form-group">
+                                <label><b>Correo electrónico:</b></label>
+                                <input type="text" name="email" class="form-control">
+                                <% if (locals.errors && errors.email) { %>
+                                    <div class="text-danger">
+                                        <%= errors.email.msg %>
+                                    </div>
+                                        <% } %>
+                            </div>
+                        </div>
+                        <div class="col-md-6 my-2">
+                            <div class="form-group">
+                                <label><b>Password:</b></label>
+                                <input type="password" name="password" class="form-control">
+                                <div class="invalid-feedback">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 my-2">
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 my-3">
+                            <button type="submit" class="btn btn-primary">Loguearme</button>
+                        </div>
+                </div>
+            </form>
         </div>
-        <div class= "correo">
-        <label> Usuario </label>
-        <input type= "usuario" name= "login [username]" value id ="email" 
-        class = "seguimos correo" tabindex= "1" placeholder = "Tu usuario">
-        </div>
-        <div class = "clave">
-        <label> Contraseña </label>
-        <input type="password" name = "login [password]" class ="tu-clave"
-        tabindex= "2" placeholder ="Tu Contraseña">
-        </div>
-        <div>
-        
-    <br>
-        <div class= "iniciar-sesion">
-        <input id ="submitlogin" type= "submit" class="hola" value="Iniciar sesión">
-         </div>
-         </form>
-         </div>
-         </div> -->
+    </div>
+</div>
 
 <!-- Se incluye Footer -->
      <%-include('./partials/footer') %>  
