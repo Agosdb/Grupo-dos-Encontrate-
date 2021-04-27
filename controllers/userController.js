@@ -11,17 +11,17 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
     register: (req, res) => {
-       return res.render('register', { errors});
+       return res.render('register');
     },
     processRegister: (req, res) => {
-       const resultValidation = validationResult(req);
-       
-       if (resultValidation.errors.length > 0){
-           return res.render('register', {
-               errors: resultValidation.mapped(),
-			   oldData: req.body
-           });
-       }
+		const resultValidation = validationResult(req);
+		
+		if (resultValidation.errors.length > 0){
+			return res.render('register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
 	   let userInDB = User.findByField('email', req.body.email);
 	   if (userInDB) {
 		   return res.render('register', { 
@@ -38,53 +38,63 @@ const usersController = {
 		   ...req.body,
 		   password: bcryptjs.hashSync(req.body.password, 10),
 		   avatar: req.file.filename
-	   }
-	   let userCreated = User.create(userToCreate);
-	   		return res.redirect('/users/login');
+		}
+	   	User.create(userToCreate);
+	   	return res.redirect('/users/login');
     },   
-    	login: (req, res) => {
-        return res.render("login");
-        },
-		loginProcess: (req, res) => {
-			let userToLogin = User.findByField ('email', req.body.email);
-
-			if (userToLogin) {
-				let correctPassword = bcryptjs.compareSync (req.body.password, userToLogin.password);
-				if(correctPassword){
-					delete userToLogin.password;
-					req.session.userLogged = userToLogin;
-					// 
-					if(req.body.remember_user) {
-						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+	login: (req, res) => {
+		return res.render("login");
+	},
+	loginProcess: (req, res) => {
+		let userToLogin = User.findByField('email', req.body.email);		
+		if (userToLogin) {
+			let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+		
+			if(correctPassword){
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
+				// 
+				if(req.body.remember_user) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				}
+				res.send('logueado!')
+				return res.redirect('profile');
+			} else {
+				return res.render('login', {
+					errors: {
+						email: {
+							msg: 'Los datos de usuario y password no coinciden'
+						}
 					}
-					return res.redirect('profile');
+				});
+			}
+		}
+			// res.send('no se encontro')
+		return res.render('login', {
+			errors: {
+				email: {
+					msg: 'No se encuentra este mail en nuestra base de datos'
 				}
 			}
-			return res.render('login', {
-				errors: {
-					email: {
-						msg: 'No se encuentra este mail en nuestra base de datos'
-					}
-				}
-			});
+		});
 
-		},
-   		profile: (req, res) => {
-       		return res.render("usersProfile",{
-				user: req.session.userLogged
-			   });
-        },
-		logout: (req, res) => {
-			res.session.destroy();
-			return res.redirect('/');
-		},
-			
+	},
+	profile: (req, res) => {
+		return res.render("usersProfile",{
+			user: req.session.userLogged
+			});
+	},
+	logout: (req, res) => {
+		res.session.destroy();
+		return res.redirect('/');
+	},
+		
            
     
     //DESDE AQUI
 
     // Detail - Detail from one users
-		detail: (req, res) => {
+	detail: (req, res) => {
 			let users = users.find(users=>users.id==req.params.id)
 			res.render('detail')
 	},

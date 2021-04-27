@@ -34,5 +34,14 @@
   "level": "customers",
   "avatar": "3d.jpg",
   "id": 4
+ },
+ {
+  "id": 5,
+  "first_name": "Santiago",
+  "last_name": "Argilla",
+  "email": "sargilla@gmail.com",
+  "password": "$2a$10$N5h0vccN4Lh.5jugCI2Q/OlMXcL6dfyfG/hveKwGhnDC2GpYtPJBK",
+  "level": "customers",
+  "avatar": "1619526651165_img.jpg"
  }
 ]

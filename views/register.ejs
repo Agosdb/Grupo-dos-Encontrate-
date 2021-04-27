@@ -4,7 +4,7 @@
 <body>
 
 
-    <form action='/users/create' method="POST" enctype="multipart/form-data"> 
+    <form action='/users/register' method="POST" enctype="multipart/form-data"> 
 
     <div class="users_registers">
     <h1 class="primero"> Creá una cuenta</h1> 
@@ -64,9 +64,9 @@
                 </div> 
                 <% } %> 
         </div>
-        <div class="category">
-            <label for="category" class="form-label">Ingrese su Categoría:</label>
-            <select name="category" id="category" class="form-input">
+        <div class="level">
+            <label for="level" class="form-label">Ingrese su Categoría:</label>
+            <select name="level" id="level" class="form-input">
                 <option value="">Elegí</option>
                 <option value="customers">Soy Cliente</option>
                 <option value="administrator">Administrador</option>

@@ -20,7 +20,7 @@ const bodyValidations = [
    body('last_name').notEmpty().withMessage('Completa tu apellido'),
    body('email').notEmpty().withMessage('Completa tu mail'),
    body('password').notEmpty().withMessage('Completa tu contraseña'),
-   body('category').notEmpty().withMessage('Selecciona tu categoría'),
+   body('level').notEmpty().withMessage('Selecciona tu categoría'),
 ];
 
 // Multer
@@ -38,8 +38,8 @@ var uploadFile = multer({ storage: storage })
 
 //loginProcess
 
-router.get("/login", guestMiddleware, usersController.loginProcess);
-router.get("/login", authMiddleware, usersController.login);
+router.get("/login", guestMiddleware, usersController.login);
+router.post("/login", usersController.loginProcess);
 
 //Register
 
