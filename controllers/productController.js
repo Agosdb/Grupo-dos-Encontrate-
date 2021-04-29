@@ -6,28 +6,27 @@ const productsFilePath = path.join(__dirname, '../data/productDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
-    products: (req, res) => {			
-      res.render('products', {products});
+    products: (req, res) => {					
+      res.render('products', {products}); //, {products}
     },
     productCar: (req, res) => {
-
-        return res.render ("productCar",{product});
+        return res.render ("productCar", {products});
     },
     productDetail: (req, res)=>{		
-		let product =products.find(p=>p.id=req.params.id);
+		let product =product.find(p=>p.id=req.params.id);
         return res.render ("productDetail",{product});
     },// no encuentro el motivo por el cual no lo redirige. y al resto si.
     productEdition: (req, res) => {
-        return res.render ("productEdition");
+        return res.render ("productEdition", {products});
     },
     registerAdministrator: (req, res) => {
-        return res.render ("registerAdministrator");
+        return res.render ("registerAdministrator", {products});
     },
     search: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let search = req.query.keywords;
 		let productsToSearch = products.filter(products => products.name.toLowerCase().includes(search));	
-		res.render('results', { 
+		res.render('products', { 
 			products: productsToSearch, 
 			search,
 		
@@ -35,8 +34,8 @@ const productController = {
 	},
     // Detail - Detail from one product
 	detail: (req, res) => {
-		let products = products.find(products=>products.id==req.params.id)
-		res.render('detail',{products})
+		let product = products.find(product=>product.id==req.params.id)		
+		res.render('products',{product})
 	},
 
 	// Create - Form to create
@@ -45,74 +44,94 @@ const productController = {
 	},
 	
 	// Create -  Method to store
-	store: (req, res) => {
-		let newProduct= req.body;
-		let image
+	// store: (req, res) => {
+	// 	let newProduct= req.body;
+	// 	let image
 		// Agrego la imagen
-		if(!req.file){
-			image = "3d.jpg"
-		} else {
-			image = req.file.filename
-		}
-		newProduct.image=image;
+		// if(!req.file){
+		// 	image = "3d.jpg"
+		// } else {
+		// 	image = req.file.filename
+		// }
+		// newProduct.image=image;
 		
-		res.send(newProduct)
+		// res.send(newProduct)
 
 
 		// Agrego el id al producto nuevo
-		let ids = products.map(p=>p.id)
-		newProduct.id = ids.length ? Math.max(...ids) + 1 : 1,
+		// let ids = products.map(p=>p.id)
+		// newProduct.id = ids.length ? Math.max(...ids) + 1 : 1,
 	
 		// res.send(newProduct)
 
 		// Guardo el producto nuevo en los productos
-		products.push(newProduct)
+		// products.push(newProduct)
 
 		// Guardo el archivo con el nuevo producto
-		let productsJson=JSON.stringify(products, null, ' ')
-		fs.writeFileSync(productsFilePath,productsJson);
+	// 	let productsJson=JSON.stringify(products, null, ' ')
+	// 	fs.writeFileSync(productsFilePath,productsJson);
+	// 	res.redirect('/');
+	// },
+	store: (req, res) => {
+		let image
+		
+		if(req.file != undefined){
+			image = req.file.filename
+		} else {
+			image = '3d.jpg'
+		}
+		
+		let ids = products.map(p=>p.id)
+		let newProduct = {
+			id: Math.max(...ids)+1,
+			...req.body,
+			image: image
+		};
+		// res.send(newProduct)
+		products.push(newProduct)
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		res.redirect('/');
 	},
 
 	// Update - Form to edit
 	edit: (req, res) => {
-		let productsToEdit = products.find(products=>products.id==req.params.id)
-		res.render('productEdition',{productsToEdit})
+		let productToEdit = products.find(product=>product.id==req.params.id)
+		res.render('productEdition',{productToEdit})
 	},
 	// Update - Method to update
 	update: (req, res) => {
 		let id = req.params.id;
-		let productsToEdit = products.find(product => products.id == id)
+		let productToEdit = products.find(product => product.id == id)
 		let image
 		if(req.file != undefined){
 			image = req.file.filename
 		} else {
-			image = productsToEdit.image
+			image = productToEdit.image
 		}
 
 		productsToEdit = {
-			id: productsToEdit.id,
+			id: productToEdit.id,
 			...req.body,
 			image: image,
 		};
 		
-		let newProduct = products.map(product => {
-			if (products.id == productsToEdit.id) {
-				return products = {...productsToEdit};
+		let newProducts = products.map(product => {
+			if (product.id == productToEdit.id) {
+				return product = {...productToEdit};
 			}
-			return products;
+			return product;
 		})
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
 		res.redirect('/products');
 	},
 
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
 		let id = req.params.id;
-		let finalProducts = products.filter(products => products .id != id);
+		let finalProducts = products.filter(product => product .id != id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-		res.redirect('/');
+		res.redirect('/products');
 	}
     
     };

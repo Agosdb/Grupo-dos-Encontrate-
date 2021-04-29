@@ -43,5 +43,23 @@
   "password": "$2a$10$N5h0vccN4Lh.5jugCI2Q/OlMXcL6dfyfG/hveKwGhnDC2GpYtPJBK",
   "level": "customers",
   "avatar": "1619526651165_img.jpg"
+ },
+ {
+  "id": 6,
+  "first_name": "lucas",
+  "last_name": "alvarez",
+  "email": "alvarezlucass@hotmail.com",
+  "password": "$2a$10$zFWHpeAVdjV5qbfADmM.q.l1HrsxNnfYEFJlpbBUlFjoGD4jRM5ta",
+  "level": "administrator",
+  "avatar": "1619540459643_img.jpg"
+ },
+ {
+  "id": 7,
+  "first_name": "l",
+  "last_name": "a",
+  "email": "a@a.com",
+  "password": "$2a$10$A0.hrbKiZWVjtog1RSZomemsxjhzRcKqsJaifve0KCAcEgTaiwKom",
+  "level": "customers",
+  "avatar": "1619719902510_img.jpg"
  }
 ]

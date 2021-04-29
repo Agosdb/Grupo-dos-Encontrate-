@@ -7,9 +7,9 @@
     <!-- /* Definición categorías de productos*/ -->
     
     <main>
-        <a href="/users" class="action-button edit">Usuarios</a>
+        <!-- <a href="/users" class="action-button edit">Usuarios</a> -->
     <div class="pageUsers">    
-        <% for (product of products) { %> 
+        <% for (user of users) { %> 
          <div class="article_banner_left">
          <div class="avatar">
              <img src="/img/avatar/<%=users.avatar %> " alt="<%=users.first_name[0] %>">

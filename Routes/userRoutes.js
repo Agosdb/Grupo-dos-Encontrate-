@@ -5,7 +5,7 @@ const multer = require('multer');
 const { body } = require('express-validator'); 
 
 const usersController = require ("../controllers/userController");
-
+//////////////////////////////////////////////////////////////
 //Middleware
 // const uploadFile= require('../middleware/multerMiddleware');
 const extensionValidations= require('../middlewares/validateRegisterMiddleware');
@@ -13,7 +13,7 @@ const guestMiddleware= require('../middlewares/guestMiddleware');
 const authMiddleware= require('../middlewares/authMiddleware');
 
 
-
+//Validaciones //////////////////////////////////////
 const bodyValidations = [
    // body('userName').notEmpty().withMessage('Selecciona tu nombre de usuario'),
    body('first_name').notEmpty().withMessage('Completa tu nombre'),
@@ -23,7 +23,7 @@ const bodyValidations = [
    body('level').notEmpty().withMessage('Selecciona tu categoría'),
 ];
 
-// Multer
+// Multer ////////////////////////////////////////////
 const storage = multer.diskStorage({ 
     destination: (req, file, cb) => { 
        cb(null, './public/img/avatar'); 
@@ -35,6 +35,7 @@ const storage = multer.diskStorage({
   })       
   
 var uploadFile = multer({ storage: storage })
+/////////////////////////////////////////////////////////////////////
 
 //loginProcess
 
@@ -62,5 +63,8 @@ router.put('/:id', uploadFile.single('avatar'), usersController.update);
 
 /*** DELETE ONE USERS***/ 
 router.delete('/:id', usersController.destroy); 
+
+// Perfil de Usuario
+router.get('/profile/', authMiddleware, usersController.profile); //authMiddleware
 
 module.exports = router;

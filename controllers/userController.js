@@ -39,7 +39,8 @@ const usersController = {
 		   password: bcryptjs.hashSync(req.body.password, 10),
 		   avatar: req.file.filename
 		}
-	   	User.create(userToCreate);
+		//probando let userCreated =
+		let userCreated = User.create(userToCreate);
 	   	return res.redirect('/users/login');
     },   
 	login: (req, res) => {
@@ -57,9 +58,11 @@ const usersController = {
 				if(req.body.remember_user) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
-				res.send('logueado!')
-				return res.redirect('profile');
-			} else {
+				// res.send('logueado!') //VER MOTIVO ERROR////////////////////////////////////////////////////////////////////////////
+				return res.redirect('/users/profile');
+			
+			} //saque un else {} de aqui. 
+			
 				return res.render('login', {
 					errors: {
 						email: {
@@ -68,7 +71,7 @@ const usersController = {
 					}
 				});
 			}
-		}
+		
 			// res.send('no se encontro')
 		return res.render('login', {
 			errors: {
@@ -80,17 +83,18 @@ const usersController = {
 
 	},
 	profile: (req, res) => {
-		return res.render("usersProfile",{
+		return res.render("profile",{
 			user: req.session.userLogged
 			});
 	},
 	logout: (req, res) => {
+		res.clearCookie('userEmail');
 		res.session.destroy();
 		return res.redirect('/');
 	},
 		
            
-    
+    // res.send('logueado!')
     //DESDE AQUI
 
     // Detail - Detail from one users
