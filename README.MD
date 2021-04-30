@@ -163,16 +163,16 @@ En cada caso deberán implementar el comportamiento que corresponda:
     ● Finalizar el Sprint 5;
             ● Que levantes usuarios;
             ● Poder cargar articulos;
-            ● Poder Cargar Usuarios;
-            ● Hacer Funcionar el Login;
+            ● Poder Cargar Usuarios; LISTO
+            ● Hacer Funcionar el Login; LISTO
     ● En general corregir CSS;
     ● Vistas en celulares, y distintos dispositivos;
 # Les sugerimos esta estructura, aunque si trabajaron diferente, vale igual. 😉
-    ● Rutas: src/routes/users.js
-    ● Controlador: src/controllers/usersController.js
-    ● Vistas: src/views/users/
-    ● Directorio para imágenes: public/images/users/
-    ● Colección: src/data/users.json
+    ● Rutas: src/routes/users.js LISTO
+    ● Controlador: src/controllers/usersController.js LISTO
+    ● Vistas: src/views/users/ 
+    ● Directorio para imágenes: public/images/users/ LISTO
+    ● Colección: src/data/users.json LISTO
 
 # Modificar INDEX, 
     Hacer que muestre procutos por categoría. 

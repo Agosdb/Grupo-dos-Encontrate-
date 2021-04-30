@@ -27,9 +27,9 @@ app.use(cookies());
 // app.use(userLoggedMiddleware); //DA ERROR
 
 
-let mainRoutes = require("./Routes/mainRoutes");
-let productRoutes = require("./Routes/productRoutes");
-let userRoutes = require("./Routes/userRoutes");
+let mainRoutes = require("./src/Routes/mainRoutes");
+let productRoutes = require("./src/Routes/productRoutes");
+let userRoutes = require("./src/Routes/userRoutes");
 
 app.listen(3030, ()=> {
     console.log("Servidor prueba 3030")

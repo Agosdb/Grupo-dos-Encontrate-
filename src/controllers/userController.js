@@ -2,7 +2,7 @@ const { SSL_OP_NO_TLSv1_1 } = require('constants');
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
-const User = require('../models/User');
+const User = require('../../models/User');
 const bcryptjs = require('bcryptjs');
 
 
@@ -69,9 +69,11 @@ const usersController = {
 							msg: 'Los datos de usuario y password no coinciden'
 						}
 					}
-				});
+				})
 			}
-		
+			if (userToLogin){
+				return res.send(userToLogin)
+			}		
 			// res.send('no se encontro')
 		return res.render('login', {
 			errors: {
@@ -79,13 +81,12 @@ const usersController = {
 					msg: 'No se encuentra este mail en nuestra base de datos'
 				}
 			}
-		});
-
+		})
 	},
 	profile: (req, res) => {
 		return res.render("profile",{
 			user: req.session.userLogged
-			});
+			})
 	},
 	logout: (req, res) => {
 		res.clearCookie('userEmail');

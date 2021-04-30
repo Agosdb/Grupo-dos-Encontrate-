@@ -8,9 +8,9 @@ const usersController = require ("../controllers/userController");
 //////////////////////////////////////////////////////////////
 //Middleware
 // const uploadFile= require('../middleware/multerMiddleware');
-const extensionValidations= require('../middlewares/validateRegisterMiddleware');
-const guestMiddleware= require('../middlewares/guestMiddleware');
-const authMiddleware= require('../middlewares/authMiddleware');
+const extensionValidations= require('../../middlewares/validateRegisterMiddleware');
+const guestMiddleware= require('../../middlewares/guestMiddleware');
+const authMiddleware= require('../../middlewares/authMiddleware');
 
 
 //Validaciones //////////////////////////////////////
