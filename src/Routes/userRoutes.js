@@ -39,8 +39,8 @@ var uploadFile = multer({ storage: storage })
 
 //loginProcess
 
-router.get("/login", guestMiddleware, usersController.login);
-router.post("/login", usersController.loginProcess);
+router.get("src/users/login", guestMiddleware, usersController.login);
+router.post("src/users/login", usersController.loginProcess);
 
 //Register
 
