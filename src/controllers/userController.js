@@ -58,7 +58,8 @@ const usersController = {
 				if(req.body.remember_user) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
-				// res.send('logueado!') //VER MOTIVO ERROR////////////////////////////////////////////////////////////////////////////
+				res.send('logueado!')
+				 //VER MOTIVO ERROR////////////////////////////////////////////////////////////////////////////
 				return res.redirect('/users/profile');
 			
 			} //saque un else {} de aqui. 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+    <form action='/users/register' method="POST" enctype="multipart/form-data"> 
+
+    <div class="users_registers">
+    <h1 class="primero"> Creá una cuenta</h1> 
+
+            <div class= "name">
+            <input type="text" 
+            id="first_name" 
+            name="first_name" 
+            class="form-control <%= locals.errors && errors.first_name ? 'is-invalid' : null %> "  
+            placeholder="Nombre /s (*)"
+            value= "<%= locals.oldData ? oldData.first_name : null %>"
+            >
+            <% if(locals.errors && errors.first_name) { %>
+                <div class="text-danger">
+                    <%= errors.first_name.msg %> 
+                </div> 
+                <% } %> 
+            <input type="text" 
+            id="last_name" 
+            name="last_name" 
+            class="form-control <%= locals.errors && errors.last_name ? 'is-invalid' : null %> "  
+            placeholder="Apellido /s (*)"
+            value= "<%= locals.oldData ? oldData.last_name : null %>"
+            >
+            <% if(locals.errors && errors.last_name) { %>
+                <div class="text-danger">
+                    <%= errors.last_name.msg %> 
+                </div> 
+                <% } %> 
+        </div>  
+
+        <div class= "email">
+            <input type="email" 
+            id="email" 
+            name="email" 
+            class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %> "  
+            placeholder="Ingresa tu email (*)"
+            value= "<%= locals.oldData ? oldData.email : null %>"
+            >
+            <% if(locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %> 
+                </div> 
+                <% } %> 
+        </div> 
+        <div class= "password">
+            <input type="password" 
+            id="password" 
+            name="password" 
+            class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %> "  
+            placeholder="Contraseña (*)"
+            value= "<%= locals.oldData ? oldData.password : null %>"
+            >
+            <% if(locals.errors && errors.password) { %>
+                <div class="text-danger">
+                    <%= errors.password.msg %> 
+                </div> 
+                <% } %> 
+        </div>
+        <div class="level">
+            <label for="level" class="form-label">Ingrese su Categoría:</label>
+            <select name="level" id="level" class="form-input">
+                <option value="">Elegí</option>
+                <option value="customers">Soy Cliente</option>
+                <option value="administrator">Administrador</option>
+                <option value="operator">Operador / Editor</option>
+            </select>
+        </div>
+
+        <div class= "avatar">
+        <label for="avatar" class="form-label">Ingrese su foto o Avatar:</label>
+		<input type="file" name="avatar" id="avatar" class="form-input">
+        </div>           
+
+       
+        <div class="registrarme">
+            <div class="registrarme">
+        <button id="buttonRegister" type="submit" title="Registrate" class="registrarme1">
+                REGISTRARME </button>
+            </div>
+
+        <p class= "is-center">
+                 ¿Ya tenes cuenta?
+        <a href="/users/login" title="Accede">
+        <strong>Accedé</strong>
+        </a>
+        </p>
+        </div>
+    </form>
+    </div>
+ <!-- Se incluye Footer -->
+
+ <%-include('./partials/footer') %>
+</body>
+ </html>
