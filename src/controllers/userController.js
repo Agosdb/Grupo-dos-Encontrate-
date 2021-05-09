@@ -41,7 +41,7 @@ const usersController = {
 		}
 		//probando let userCreated =
 		let userCreated = User.create(userToCreate);
-	   	return res.redirect('/users/login');
+	   	return res.redirect('login');
     },   
 	login: (req, res) => {
 		return res.render("login");
@@ -59,7 +59,7 @@ const usersController = {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 				// res.send('logueado!') //VER MOTIVO ERROR////////////////////////////////////////////////////////////////////////////
-				return res.redirect('/users/profile');
+				return res.redirect('profile');
 			
 			} //saque un else {} de aqui. 
 			
@@ -136,7 +136,7 @@ const usersController = {
 		// Guardo el archivo con el nuevo producto
 		let usersJson=JSON.stringify(users, null, ' ')
 		fs.writeFileSync(usersFilePath,usersJson);
-		res.redirect('/users');
+		res.redirect('users');
 	},
 
 	// Update - Form to edit
@@ -169,7 +169,7 @@ const usersController = {
 		})
 
 		fs.writeFileSync(usersFilePath, JSON.stringify(newUsers, null, ' '));
-		res.redirect('/users');
+		res.redirect('users');
 	},
 
 	// Delete - Delete one product from DB
@@ -177,7 +177,7 @@ const usersController = {
 		let id = req.params.id;
 		let finalUsers = users.filter(users => users .id != id);
 		fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
-		res.redirect('/users');    
+		res.redirect('users');    
     }
 }  
     module.exports = usersController;

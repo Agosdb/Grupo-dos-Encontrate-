@@ -1,7 +1,6 @@
 
 
-
-const controller = {
+const controller = {    
     index: (req, res) => {
         res.render('index');
     },
@@ -12,5 +11,4 @@ const controller = {
         return res.render("addCategory");
     },
 }
-
 module.exports = controller;

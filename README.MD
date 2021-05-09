@@ -170,7 +170,7 @@ En cada caso deberán implementar el comportamiento que corresponda:
 # Les sugerimos esta estructura, aunque si trabajaron diferente, vale igual. 😉
     ● Rutas: src/routes/users.js LISTO
     ● Controlador: src/controllers/usersController.js LISTO
-    ● Vistas: src/views/users/ 
+    ● Vistas: src/views/users/ listo
     ● Directorio para imágenes: public/images/users/ LISTO
     ● Colección: src/data/users.json LISTO
 
@@ -201,6 +201,7 @@ https://app.diagrams.net/?libs=general;uml#HAgosdb%2FGrupo-dos-Encontrate-%2Fmas
 # Script de estructura
 Tomando como referencia el diagrama del punto anterior, tienen que escribir las
 sentencias de SQL que crearán las tablas y sus relaciones.
+
     ● Deberá incluir la creación de la base de datos (create database…).
     ● Deberá incluir la creación de todas las tablas del sitio (create table…).
     ● Deberá incluir los tipos de datos de los campos y sus restricciones (primary keys,
@@ -289,5 +290,133 @@ Rutas, controladores y vistas necesarias para que suceda lo detallado previament
     ○ De usuarios.
     ○ (Opcional) De tablas secundarias
 
+# Sprint 7
 
+# Penientes;
 
+    ● Finalizar el Sprint 5;
+            ● Que levantes usuarios;
+            ● Poder cargar articulos;
+
+    ● En general corregir CSS;
+    ● Vistas en celulares, y distintos dispositivos;
+
+    ● Finalizar el Sprint 6;
+        ● Completo (TODO);
+
+# Validaciones de back-end y front-end
+
+3. Validaciones del back-end
+
+# Vamos con esas consignas:
+
+# Registro de usuarios
+
+● Nombre y apellido
+        ■ Obligatorio.
+        ■ Deberá tener al menos 2 caracteres.
+● Email
+        ■ Obligatorio.
+        ■ Deberá ser un formato de e-mail válido.
+        ■ No puede repetirse con los e-mails ya registrados.
+● Contraseña
+        ■ Obligatoria.
+        ■ Deberá tener al menos 8 caracteres.
+        ■ (Opcional) → Deberá tener letras mayúsculas, minúsculas, un
+número y un carácter especial.
+○ Imagen
+        ■ Deberá ser un archivo válido (JPG, JPEG, PNG, GIF).
+● Login de usuarios (este ya lo deberían tener de sprints anteriores 😊☝️)
+○ Email
+        ■ Obligatorio.
+        ■ Deberá ser válido.
+        ■ Deberá existir en base.
+○ Contraseña
+        ■ Obligatoria.
+        ■ Deberá coincidir con la existente en base.
+
+# Creación y modificación de productos
+○ Nombre
+        ■ Obligatorio.
+        ■ Deberá tener al menos 5 caracteres.
+○ Descripción
+        ■ Deberá tener al menos 20 caracteres.
+○ Imagen
+        ■ Deberá ser un archivo válido (JPG, JPEG, PNG, GIF).
+○ (Opcional) Tablas secundarias
+        ■ Verificar que los valores existan en base. Es decir, que los valores
+de talles, colores, etc. que lleguen sean válidos en la base.
+● (Opcional) Resto de los formularios del sitio
+
+# Entregable: 
+Implementación de Express Validator en las rutas que reciban formularios.
+
+# Validaciones del front-end
+
+Nuestro objetivo acá es doble:
+1. Por un lado, vamos a validar los datos antes de enviarlos para evitarle procesos
+innecesarios al servidor.
+2. Por el otro, vamos a darle feedback inmediato y de calidad a nuestro visitante.
+Esto se traduce en una mucho mejor experiencia (UX) dentro de nuestro sitio.
+Vamos con esas consignas:
+
+# Nuestro objetivo acá es doble:
+
+1. Por un lado, vamos a validar los datos antes de enviarlos para evitarle procesos
+innecesarios al servidor.
+2. Por el otro, vamos a darle feedback inmediato y de calidad a nuestro visitante.
+Esto se traduce en una mucho mejor experiencia (UX) dentro de nuestro sitio.
+
+# Vamos con esas consignas:
+
+● Registro de usuarios
+○ Nombre y apellido
+        ■ Obligatorio.
+        ■ Deberá tener al menos 2 caracteres.
+○ Email
+        ■ Obligatorio.
+        ■ Deberá ser válido.
+        ■ (Opcional) → No puede repetirse con los e-mails ya registrados.
+○ Contraseña
+        ■ Obligatoria.
+        ■ Deberá tener al menos 8 caracteres.
+        ■ (Opcional) → Deberá tener letras mayúsculas, minúsculas, un
+        número y un carácter especial.
+○ Imagen
+        ■ Deberá ser un archivo válido (JPG, JPEG, PNG, GIF).
+● Login de usuarios (este ya lo deberían tener de sprints anteriores 😊☝️)
+○ Email
+        ■ Obligatorio.
+        ■ Deberá ser válido.
+        ■ (Opcional) → Debe existir en la base.
+○ Contraseña
+        ■ Obligatoria.
+● Creación y modificación de productos
+○ Nombre
+        ■ Obligatorio.
+        ■ Deberá tener al menos 5 caracteres.
+○ Descripción
+        ■ Deberá tener al menos 20 caracteres.
+○ Imagen
+        ■ Deberá ser un archivo válido (JPG, JPEG, PNG, GIF).
+● (Opcional) Resto de los formularios del sitio
+
+# Entregable: 
+
+Implementación de validator.js (documentación/descarga) o validaciones "custom" en los formularios mencionados.
+
+# Resumen de entregables
+
+● Archivo retro.md con el resultado de la retrospectiva.
+● (Opcional) Archivo daily.md con sus opiniones sobre las dailys/weeklys
+● Tablero de trabajo actualizado.
+● Validaciones del back-end con Express Validator:
+○ Registro de usuarios.
+○ Login de usuarios.
+○ Creación y modificación de productos.
+○ (Opcional) Resto de los formularios del sitio.
+● Validaciones del front-end con JavaScript:
+○ Registro de usuarios.
+○ Login de usuarios.
+○ Creación y modificación de productos.
+○ (Opcional) Resto de los formularios del sitio

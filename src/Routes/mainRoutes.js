@@ -9,7 +9,4 @@ router.get("/", mainController.index);
 router.get ("/enConstruccion", mainController.enConstruccion);
 router.get ("/addCategory", mainController.addCategory);
 
-
-
-
 module.exports = router;

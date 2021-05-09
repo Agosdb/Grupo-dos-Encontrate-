@@ -1,20 +1,20 @@
-
-const express = require("express");
+// ************ Require's ************
+const express = require('express');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
 const cookies = require('cookie-parser');
-
+// ************ express() - (don't touch) ************
 const app = express();   
-
-app.use(express.static('./public'));
+ // ************ Template Engine - (don't touch) ************
 app.set("view engine", "ejs");
+app.set('views', '../src/views'); // Seteo de la ubicación de la carpeta "views"
+// ************ Middlewares - (don't touch) ************
+app.use(express.static('../public'));
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.urlencoded({ extended: false }));
-
 app.use(express.json());
 
 // const userLoggedMiddleware = require ('../middleware/userLoggedMiddleware'); //DA ERROR
-
 
 app.use(session({
   secret: "Reserved",
@@ -26,12 +26,12 @@ app.use(cookies());
 
 // app.use(userLoggedMiddleware); //DA ERROR
 
+//ver si corresponde ../src/ o que quede ./rRoutes
+let mainRoutes = require("./Routes/mainRoutes");
+let productRoutes = require("./Routes/productRoutes");
+let userRoutes = require("./Routes/userRoutes");
 
-let mainRoutes = require("./src/Routes/mainRoutes");
-let productRoutes = require("./src/Routes/productRoutes");
-let userRoutes = require("./src/Routes/userRoutes");
-
-app.listen(3030, ()=> {
+app.listen('3030', ()=> {
     console.log("Servidor prueba 3030")
 });
 
