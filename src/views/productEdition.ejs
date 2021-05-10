@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    
+<body>
+    <!-- <link rel="stylesheet" href="/css/productEdition.css"> -->
+     <!-- Se incluye Header Interno -->
+    <%-include('./partials/headerInterno') %>
+    
+    <h1>Edición de Productos</h1>
+    <h2>Modificación de Productos</h2>
+    <section class="pageAdministrator">
+        <h3>Categoría del Productos</h3>
+        <div class="category">
+            <ul>
+            <li>        
+            <label for="text" id="Categoria">Categoría:</label> 
+            <input type="text" id="Categoria" name="Categoria"></input>
+            <!-- Ej. GPS-Accesorios-Indumentaria -->
+            </li>
+            <!-- <h4>Actividad</h4> -->
+            <li>        
+            <label for="text" id="activity">Actividad:</label>
+            <input type="text" id="activity" name="activity"></input>
+            <!-- ej. si es aventura, cross, motor u otros -->
+            </li>
+            </ul>
+        <!-- </button>
+        <button type="newCategory" title="newCategory" class="btnFlat accent btn-proceed" onclick="#";>
+            <font style="vertical-align:inherit;">Agregar Categoría</font>
+        </button>
+        <button type="newActivity" title="newCategory" class="btnFlat accent btn-proceed" onclick="#";>
+            <font style="vertical-align:inherit;">Agregar Actividad</font>
+        </button> -->
+        </div>
+
+        <h3>Descripción del producto</h3>
+        <div class="descripcion">
+            <ul>
+            <li>        
+            <label for="text" id="name">Nombre:</label>
+            <input type="text" id="name" name="name"></input>
+            </li>
+            <li>        
+            <label for="text" id="description">Descripción:</label>
+            <textarea id="description" name="description" rows="5" cols="100"></textarea>
+            <!-- <input type="text" id="description" name="description"></input> -->
+            </li>         
+            <li>        
+            <label for="text" id="barCode">Código de Barras:</label>
+            <input type="text" id="barCode" name="barCode"></input>
+            </li> 
+            <li>
+                <!-- descripción principal del producto. detalles         -->
+            <label for="text" id="resenia">Reseña:</label>
+            <input type="text" id="resenia" name="resenia"></input>
+            </li>
+            </ul>
+        <!-- <button type="boxInclude" title="boxInclude" class="btnFlat accent btn-proceed" onclick="#";>
+            <font style="vertical-align:inherit;">Accesorios Incluidos</font>
+        </button>
+        <button type="techDetails" title="techDetails" class="btnFlat accent btn-proceed" onclick="#";>
+            <font style="vertical-align:inherit;">Detalles Técnicos</font>
+        </button>                -->
+        </div> 
+        <!-- Código de Barra o QR -->
+        <div class="qrcode">
+            <span style="font-size: 48px;"><i class="fas fa-qrcode"></i></span>
+        </div> 
+
+        <!-- <div class="infoTecnica"> -->
+        <h3>Agregar Imagenes Oficiales del Producto</h3>
+        <div class="insertImg">
+            <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
+            <input type="file" name="imagen" />
+            </form>
+        </div>
+
+        <!-- </div> -->
+            <li>
+            <label for="number" id="salesPromotions">Precio Promoción:</label>
+            <input type="number" id="salesPromotions" name="salesPromotions"></input>
+            </li>
+            </ul>
+        <div class="buttons">
+            <button type="save" title="save" class="btnFlat accent btn-proceed" onclick="#";>
+                <font style="vertical-align:inherit;">Guardar</font>
+            </button>
+            <button type="trash" title="trash" class="btnFlat accent btn-proceed" onclick="#";>
+                <font style="vertical-align:inherit;">Eliminar Producto</font>
+            </button>
+            <!-- <button type="upgrade" title="upgrade" class="btnFlat accent btn-proceed" onclick="#";>
+                <font style="vertical-align:inherit;">Actualización Bases y Web</font>
+            </button> -->
+        </div>
+        </div>
+        </div>
+            </ul>
+        </div>
+    </section>
+
+</body>
+</html>
