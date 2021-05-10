@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<!-- se incluye Head -->
+<%- include('./partials/head') %>
+
+<body>
+      <!-- Se incluye Header -->
+      <%- include('./partials/header') %>
+
+      <section class="pageAdministrator">
+        <h3>Agregar Categoría</h3>
+         <!-- Se agrego metodo post-->
+        <form action='/products/CREATE' method="POST" enctype="multipart/form-data"> 
+
+        <div class="addCategory"> 
+            <label for="addCategory" class="form-label">Categoría:</label>
+            <input type="text" id="addCategory" name="addCategory" placeholder="Ej. Montañismo" class="form-input"> 
+            <div class="buttons">
+            <button type="submit" class="buy-now-button">Guardar</button>
+            <button type="trash" class="buy-now-button">Eliminar</button>
+
+
+ <!-- Se incluye Footer -->
+
+ <%- include('./partials/footer') %>  
+ 
+
+</body>
+</html>
