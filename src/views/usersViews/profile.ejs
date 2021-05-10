@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <!-- se incluye Head -->
+    <%-include('./partials/head') %>
+            
+<body>
+     <!-- Se incluye Header -->
+     <%-include('./partials/header') %>
+    <!-- <a href="/users" class="action-button edit"></a> -->
+
+         <div class="presentation">
+             <div class="first_name">
+                 <h1> "Hola, <%= users.first_name %>"</h1>
+            </div>
+            <div class="avatar">
+                <img src= "/img/avatar/<%= users.avatar %>">
+            </div>
+            
+         </div>
+         
+
+        
+
+</body> 
+</html>        
